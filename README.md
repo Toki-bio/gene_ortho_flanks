@@ -56,6 +56,28 @@ for viewing.
 
 Test set: gene-level L (112) + M (574).
 
+## Tests
+
+- Toy with a known answer (`tests/make_toy.py`, `tests/run_toy.sh`): 100 intact
+  one2one genes, trizona region +-60 kb kept or with the ortholog cut out.
+  97/100 right at both flank scales, the other 3 refused, no wrong calls.
+- Real control: 200 random FI genes -> 0 empty sites at any scale
+  (1 kb: 192 present, 10 kb: 194 present).
+
+Rules learned from the tests: a 10 kb flank maps in pieces (indels), so the gene
+end is placed from the piece nearest the gene; an empty site needs aligned flank
+within max(100 bp, 20 % of gene) of the gene (COX14, 174 bp, was a false call
+from a 1 kb extrapolation); neighbour genes test synteny only (intergenic size
+change hides gene-sized deletions: 38/200 false empty sites before the change).
+
+## Results: betulina -> trizona (therioserver:/home/toki/gof/b2t/out/verdicts.tsv)
+
+686 TOGA2 L+M genes, 1 kb flanks: present 211, no_anchor 206, one_flank 141,
+size_changed 69, synteny_broken 54, empty_site 2. Neighbours syntenic 504.
+Empty sites, both flank scales agree and neighbours syntenic:
+EPS8L1 (L, 17,952 bp gene -> 272 bp in trizona), TMED4 (M, 2,947 bp -> 299 bp).
+
 ## Status
 
-2026-10-30: repository started; inputs located.
+2026-10-30: gof.py works on the first pair; next: why L/M flanks fail to place
+(no_anchor / one_flank), and alignments for the empty sites.

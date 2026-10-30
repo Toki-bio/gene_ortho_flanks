@@ -24,6 +24,7 @@ MIN_ALIGNED = 300       # ... or at least this many bp (a 1 kb flank often align
 EMPTY_FRAC = 0.2        # query gap <= 20 % of the gene span -> empty site
 PRESENT_LO, PRESENT_HI = 0.5, 2.0
 INTACT = ("FI", "I")
+MAX_SLACK = 100         # empty site needs aligned flank within this of the gene (or 20 % of its length)
 
 
 def sh(cmd):
@@ -128,9 +129,10 @@ def neighbours(gene, span, by_contig, status, o2o):
     return left, right
 
 
-def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac):
+def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac, slack=0):
     """lhit/rhit: (contig, inner_pos, strand) or None. ref_gap = what lies
-    between the two anchors in the reference (incl. the gene)."""
+    between the two anchors in the reference (incl. the gene). slack = flank
+    bases between the aligned pieces and the gene (extrapolated, not seen)."""
     if lhit is None and rhit is None:
         return "no_anchor", ""
     if lhit is None or rhit is None:
@@ -148,6 +150,8 @@ def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac):
         return "assembly_gap", str(gap)
     expected_empty = ref_gap - gene_len
     if gap - expected_empty <= EMPTY_FRAC * gene_len:
+        if slack > max(MAX_SLACK, EMPTY_FRAC * gene_len):
+            return "unresolved", str(gap)
         return "empty_site", str(gap)
     r = gap / ref_gap if ref_gap else 0
     if PRESENT_LO <= r <= PRESENT_HI:
@@ -223,7 +227,8 @@ def main():
             inner = te + (gpos - qe) if side == "L" else ts - (qs - gpos)
         else:
             inner = ts - (gpos - qe) if side == "L" else te + (qs - gpos)
-        hits[(g, side, fl)] = (tn, inner, strand, aligned)
+        edge = best[2] if side == "L" else best[1]
+        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos))
 
     ncache = {}
 
@@ -253,7 +258,8 @@ def main():
             for fl in FLANKS:
                 lh = hits.get((g, "L", str(fl)))
                 rh = hits.get((g, "R", str(fl)))
-                v, gap = pair_verdict(lh and lh[:3], rh and rh[:3], glen, glen, qsizes, nfrac)
+                slack = (lh[3] if lh else 0) + (rh[3] if rh else 0)
+                v, gap = pair_verdict(lh and lh[:3], rh and rh[:3], glen, glen, qsizes, nfrac, slack)
                 loc = ""
                 if lh and rh and lh[0] == rh[0]:
                     lo, hi = sorted((lh[1], rh[1]))
@@ -269,7 +275,12 @@ def main():
                 same = span[ln][3] == lq[3]          # neighbour keeps its strand -> '+' orientation
                 lhit = (lq[0], lq[2] if same else lq[1], "+" if same else "-")
                 rhit = (rq[0], rq[1] if same else rq[2], "+" if same else "-")
-                nv, ngap = pair_verdict(lhit, rhit, rgap_i, glen, qsizes, nfrac)
+                # neighbours are tens of kb apart: intergenic size change hides
+                # a gene-sized deletion, so this scale tests synteny only
+                nv, ngap = pair_verdict(lhit, rhit, rgap_i, 0, qsizes, nfrac)
+                if nv in ("empty_site", "present", "size_changed"):
+                    r = int(ngap) / rgap_i if rgap_i else 0
+                    nv = "syntenic" if PRESENT_LO <= r <= PRESENT_HI else "syntenic_size_changed"
                 rgap = str(rgap_i)
             row += [ln or "", rn or "", nv, ngap, rgap]
             inside = ""
