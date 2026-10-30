@@ -96,8 +96,33 @@ size; scaffolders write 100 N), checked between the aligned piece edges, not the
 extrapolated gene ends. The toy has a third version (gene replaced by 100 N):
 97/100 assembly_gap, 0 empty_site.
 
+## Edge scale + one call per gene (2026-10-30)
+
+Edge scale (`--wga-paf`): 1 kb flanks at the edges of the reference stretch that has
+no whole-genome alignment to the query, for losses larger than the fixed flanks.
+Only empty / not_empty is meaningful there. Gene call (`call` column): assembly_gap
+anywhere blocks; deletion = an empty site and no fixed flank that sees the gene;
+conflict = empty at one scale, present at a fixed one.
+Toy (100 genes x 3 versions): intact 99 present / 0 deletion; cut 99 deletion;
+100-N gap 99 assembly_gap / 0 deletion. 200 FI controls: 0 deletion.
+b2t L/M: non-IG/TR 9 deletion (OR7D4, CYP3A43+CYP3A5, SMCO1, OR5B2, OR7E24_28287,
+SCGB1D1+SCGB1D2, TMEM114), 2 conflict, 133 assembly_gap; IG/TR 12 deletion (IGK array).
+These are candidates until the query's own reads agree (hifi/).
+
+## Trizona N regions and the HiFi rebuild (hifi/)
+
+All 731 N runs of mSicTri.1 are 100 N (724) or 200 N (7) = Hi-C scaffolding joins of
+hifiasm contigs (YaHS), size unknown. The betulina stretches facing them are only mildly
+GC-rich (0.48-0.56 vs 0.45) and have no duplicate > 9.5 kb; the trizona sequence beside
+the gaps has no satellite array either. Test with trizona's own reads (ENA ERR16751478,
+Revio HiFi, 71.5 Gb): unique 25-mer baits (trizona region +-10 kb and the betulina
+stretch, k-mers <= 1 copy in each genome) -> scfish (single-read mode, >= 3 hits) ->
+hifiasm per region -> evaluate.py (CIGAR-based edge positions). 22 regions: 10 gaps,
+9 deletion sites, 3 controls. Simulated-read toy exact on 6/6 (26,915 bp insert, 0 bp
+empty, 225 bp site, 3 controls identical to the assembly).
+
 ## Status
 
-2026-10-30: gof.py works on the first pair; no deletion confirmed yet. Next:
-anchors at the edges of a WGA-unaligned stretch, for deletions larger than the
-10 kb flanks (OR7E24_4190, TMEM114_52).
+2026-10-30: gof.py with three flank scales and a gene call; HiFi rebuild of 22
+regions runs on therioserver after the read download
+(/home/toki/gof/hifi/rebuild.log, rebuild_results.tsv).

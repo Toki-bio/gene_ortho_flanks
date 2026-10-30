@@ -177,9 +177,11 @@ def gene_call(r):
     flank = [r.get(f"f{fl}_verdict", "") for fl in FLANKS] + [r.get("edge_verdict", "")]
     if "assembly_gap" in flank or r.get("nb_verdict") == "assembly_gap":
         return "assembly_gap"
-    seen = {"present", "size_changed", "not_empty"}
+    # only the fixed flanks can see the gene; edge "not_empty" is unaligned flank sequence
+    # (toy: 6 of 100 cut genes became "conflict" when it counted)
+    seen = {"present", "size_changed"}
     if "empty_site" in flank:
-        return "conflict" if seen & set(flank) else "deletion"
+        return "conflict" if seen & set(flank[:len(FLANKS)]) else "deletion"
     if "present" in flank:
         return "present"
     return "no_call"
