@@ -154,4 +154,8 @@ for l in open(regions_f):
             al = sum(x["alen"] for x in ca)
             note = f"vs_assembly_ident={m / al:.4f}" if al else "vs_assembly_unaligned"
         note = ";".join(x for x in (f"flank_ident={flank_ident}", note) if x)
+        if os.environ.get("SPAN_DIR"):         # contig piece rlo-M..rhi+M plus 10 kb each side, for follow-up checks
+            s0 = max(0, lo - 10000)
+            with open(os.path.join(os.environ["SPAN_DIR"], f"{rid}__{name}.fa"), "w") as h:
+                h.write(f">{rid}__{name} middle={lo + M - s0}-{hi - M - s0}\n{contigs[name][s0:hi + 10000]}\n")
         print("\t".join(base + ["spanned", name, str(qe - qs), str(hi - lo - 2 * M), str(re_ - rs), r_cov, r_ident, note]))
