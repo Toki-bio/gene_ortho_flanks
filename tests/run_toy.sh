@@ -9,7 +9,7 @@ export TMPDIR=/home/toki/tmp
 T=/home/toki/toga2/b2t
 TO=$T/full/toga_out
 python3 $C/tests/make_toy.py $TO $T/sbe_ref_isoforms.tsv /home/toki/toga2/inputs/trizona_nodot.2bit $W 100
-for v in keep del; do
+for v in keep del gap; do
   faToTwoBit $v.fa $v.2bit
   minimap2 -x asm20 -d $v.mmi $v.fa 2> $v.idx.log
   python3 $C/gof.py --toga $TO --ref-bed $T/sbe_ref_annotation.bed --isoforms $T/sbe_ref_isoforms.tsv \

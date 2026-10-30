@@ -2,9 +2,10 @@
 """Toy with a known answer for gof.py.
 
 Takes N intact (FI) one2one genes, cuts their trizona region (ortholog +- PAD)
-from the query genome twice: keep_<gene> (unchanged; truth = present) and
-del_<gene> (all query projections of the gene removed; truth = empty_site).
-Writes keep.fa, del.fa, genes.txt into OUT.
+from the query genome three times: keep_<gene> (unchanged; truth = present),
+del_<gene> (all query projections of the gene removed; truth = empty_site) and
+gap_<gene> (gene replaced by 100 N, a scaffolding gap; truth = assembly_gap).
+Writes keep.fa, del.fa, gap.fa, genes.txt into OUT.
 
 Usage: make_toy.py TOGA_OUT REF_ISOFORMS QUERY_2BIT OUT [N]
 """
@@ -87,12 +88,13 @@ def fetch(c, s, e):
 
 
 with open(os.path.join(out, "keep.fa"), "w") as k, open(os.path.join(out, "del.fa"), "w") as d, \
-        open(os.path.join(out, "genes.txt"), "w") as gl, open(os.path.join(out, "truth.tsv"), "w") as t:
+        open(os.path.join(out, "gap.fa"), "w") as gp, open(os.path.join(out, "genes.txt"), "w") as gl, open(os.path.join(out, "truth.tsv"), "w") as t:
     t.write("gene\tquery_locus\tdeleted_len\n")
     for g, c, gs, ge in pick:
         left, mid, right = fetch(c, gs - PAD, gs), fetch(c, gs, ge), fetch(c, ge, ge + PAD)
         k.write(f">keep_{g}\n{left}{mid}{right}\n")
         d.write(f">del_{g}\n{left}{right}\n")
+        gp.write(f">gap_{g}\n{left}{'N' * 100}{right}\n")
         gl.write(g + "\n")
         t.write(f"{g}\t{c}:{gs}-{ge}\t{ge - gs}\n")
 print(f"{len(pick)} toy genes of {len(cand)} candidates -> {out}")

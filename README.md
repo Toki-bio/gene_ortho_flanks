@@ -61,6 +61,7 @@ Test set: gene-level L (112) + M (574).
 - Toy with a known answer (`tests/make_toy.py`, `tests/run_toy.sh`): 100 intact
   one2one genes, trizona region +-60 kb kept or with the ortholog cut out.
   97/100 right at both flank scales, the other 3 refused, no wrong calls.
+  Third version, ortholog replaced by 100 N: 97/100 assembly_gap, 0 empty_site.
 - Real control: 200 random FI genes -> 0 empty sites at any scale
   (1 kb: 192 present, 10 kb: 194 present).
 
@@ -72,32 +73,31 @@ change hides gene-sized deletions: 38/200 false empty sites before the change).
 
 ## Results: betulina -> trizona (therioserver:/home/toki/gof/b2t/out/verdicts.tsv)
 
-686 TOGA2 L+M genes, 1 kb flanks: present 211, no_anchor 206, one_flank 141,
-size_changed 69, synteny_broken 54, empty_site 2. Neighbours syntenic 504.
-Empty sites, both flank scales agree and neighbours syntenic:
-EPS8L1 (L, 17,952 bp gene -> 272 bp in trizona), TMED4 (M, 2,947 bp -> 299 bp).
+**No confirmed deletion among the 686 TOGA2 L+M genes (2026-10-30, after the
+N-run fix).** EPS8L1 and TMED4, first reported as empty sites, sit at 100-N
+scaffolding gaps in trizona (284 bp and 534 bp from the site): one flank's
+aligned piece ended beyond the gap and was extrapolated across it. Their
+alignments in `results/b2t/aln/` show this gap; they are kept as examples of
+the failure, not as deletions.
 
-Alignments (ViewAlign links): `results/b2t/aln/`. EPS8L1: one 17,679-column gap
-in trizona, 220 of 2,173 CDS bases still opposite trizona bases (3' end), flank
-identity 95.8 / 97.8 %. TMED4: one 2,652-column gap, 150 of 684 CDS bases
-opposite trizona bases, flanks 97.9 %. Both are deletions of most of the gene.
+381 non-IG/TR genes, 1 kb flanks: present 185, no_anchor 108, one_flank 45,
+flank_not_unique 29, assembly_gap 8, synteny_broken 4.
+305 IG/TR V/D/J segments (IGH ptg000106l, IGK ptg000045l): flanks are array
+copies, mostly flank_not_unique.
 
-Why flanks are not placed (tests/why_unplaced.py, tests/split_ig.sh): 305 of the
-686 L/M genes are IG/TR V/D/J segments (IGH array on ptg000106l, IGK on
-ptg000045l). Their flanks are array copies (MAPQ < 20 or a paralogous copy), so
-size_changed / synteny_broken there are not trustworthy. The other 381 genes:
-present 194, no_anchor 108 (61 of them with neighbours syntenic but the
-neighbour interval changed size), one_flank 62, empty_site 2.
+No-anchor genes (tests/no_anchor_profile.py + tests/nb_ncheck.py): 28 lie in
+betulina stretches with no whole-genome alignment to trizona (25-285 kb) whose
+size matches the shrink of the neighbour interval; 26 of them have exactly one
+100-N gap in that trizona interval = assembly gaps, not deletions. Left without
+an N gap: OR7E24_4190 (132 kb, olfactory receptor cluster) and TMEM114_52 (70 kb).
 
-Flank uniqueness (gof.py `NONUNIQUE_S2S1` = 0.8, minimap2 s2/s1 of the flank's
-strongest piece): verdict `flank_not_unique`. b2t, 1 kb: IG/TR 188 not unique, 2
-present (was 17); other L/M 29 not unique; FI controls 10/200 refused, toy unchanged.
-
-Alignments now span 10 kb each side and come with a BED track (`<gene>.bed`,
-ViewAlign `&bed=`): flanks 1/10 kb, reference transcripts (BED12 exons/introns/CDS),
-TOGA2 projections on the query row.
+Rules learned: an N run of >= 10 between the anchors means assembly_gap (any
+size; scaffolders write 100 N), checked between the aligned piece edges, not the
+extrapolated gene ends. The toy has a third version (gene replaced by 100 N):
+97/100 assembly_gap, 0 empty_site.
 
 ## Status
 
-2026-10-30: gof.py works on the first pair; next: why L/M flanks fail to place
-(no_anchor / one_flank), and alignments for the empty sites.
+2026-10-30: gof.py works on the first pair; no deletion confirmed yet. Next:
+anchors at the edges of a WGA-unaligned stretch, for deletions larger than the
+10 kb flanks (OR7E24_4190, TMEM114_52).

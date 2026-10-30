@@ -13,6 +13,7 @@ import argparse
 import bisect
 import collections
 import os
+import re
 import struct
 import subprocess
 import sys
@@ -26,6 +27,7 @@ PRESENT_LO, PRESENT_HI = 0.5, 2.0
 INTACT = ("FI", "I")
 NONUNIQUE_S2S1 = 0.8    # flank whose best secondary chain scores >= 0.8 of the primary is not unique
                         # (minimap2's own -p default; b2t: 4 % of FI-control vs 93 % of IG/TR flanks)
+MIN_N_RUN = 10          # N run between anchors that makes the interval an assembly gap
 MAX_SLACK = 100         # empty site needs aligned flank within this of the gene (or 20 % of its length)
 
 
@@ -131,14 +133,14 @@ def neighbours(gene, span, by_contig, status, o2o):
     return left, right
 
 
-def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac, slack=0):
+def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nrun, slack=0):
     """lhit/rhit: (contig, inner_pos, strand) or None. ref_gap = what lies
     between the two anchors in the reference (incl. the gene). slack = flank
     bases between the aligned pieces and the gene (extrapolated, not seen)."""
     if lhit is None and rhit is None:
         return "no_anchor", ""
     if lhit is None or rhit is None:
-        c, p, st = lhit or rhit
+        c, p, st = (lhit or rhit)[:3]
         room = min(p, qsizes.get(c, 0) - p)
         return ("assembly_edge" if room < ref_gap else "one_flank"), ""
     if lhit[0] != rhit[0] or lhit[2] != rhit[2]:
@@ -147,8 +149,12 @@ def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac, slack=0):
     # flanks may overlap in the query when the deletion took a little more than the gene
     if gap < -max(1000, EMPTY_FRAC * gene_len):
         return "synteny_broken", str(gap)
-    nf = nfrac(lhit[0], *sorted((lhit[1], rhit[1])))
-    if nf > 0.1:
+    # any N run between the anchors: an assembly gap of unknown size (scaffolders write 100 N),
+    # so the interval length says nothing (b2t: 26 of 28 "large deletions" were one 100-N gap)
+    # checked between the ALIGNED piece edges (element 3 when given), not the extrapolated
+    # gene ends: EPS8L1/TMED4 were false empty sites, a flank extrapolated across a 100-N gap
+    pts = [h[3] if len(h) > 3 else h[1] for h in (lhit, rhit)] + [lhit[1], rhit[1]]
+    if nrun(lhit[0], min(pts), max(pts)) >= MIN_N_RUN:
         return "assembly_gap", str(gap)
     expected_empty = ref_gap - gene_len
     if gap - expected_empty <= EMPTY_FRAC * gene_len:
@@ -235,19 +241,22 @@ def main():
         edge = best[2] if side == "L" else best[1]
         # uniqueness from the strongest piece of the chosen target
         s2s1 = max((p for p in ps if (p[4], p[3]) == (tn, strand)), key=lambda p: p[8])[7]
-        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos), s2s1)
+        # target position of the aligned piece's gene-side end
+        tedge = (te if side == "L" else ts) if strand == "+" else (ts if side == "L" else te)
+        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos), s2s1, tedge)
 
     ncache = {}
 
-    def nfrac(c, s, e):
+    def nrun(c, s, e):
+        """Longest N run in the query interval."""
         if e - s <= 0 or e - s > 5_000_000:
-            return 0.0
+            return 0
         k = (c, s, e)
         if k not in ncache:
             seq = subprocess.run(["twoBitToFa", f"{a.query_2bit}:{c}:{s}-{e}", "stdout"],
                                  capture_output=True, text=True, check=True).stdout
             seq = "".join(seq.splitlines()[1:])
-            ncache[k] = seq.upper().count("N") / max(1, len(seq))
+            ncache[k] = max((len(m) for m in re.findall("N+", seq.upper())), default=0)
         return ncache[k]
 
     out = os.path.join(a.out, "verdicts.tsv")
@@ -266,7 +275,8 @@ def main():
                 lh = hits.get((g, "L", str(fl)))
                 rh = hits.get((g, "R", str(fl)))
                 slack = (lh[3] if lh else 0) + (rh[3] if rh else 0)
-                v, gap = pair_verdict(lh and lh[:3], rh and rh[:3], glen, glen, qsizes, nfrac, slack)
+                v, gap = pair_verdict(lh and (lh[0], lh[1], lh[2], lh[5]), rh and (rh[0], rh[1], rh[2], rh[5]),
+                                      glen, glen, qsizes, nrun, slack)
                 if any(x and x[4] >= NONUNIQUE_S2S1 for x in (lh, rh)):
                     v = "flank_not_unique"
                 loc = ""
@@ -286,7 +296,7 @@ def main():
                 rhit = (rq[0], rq[1] if same else rq[2], "+" if same else "-")
                 # neighbours are tens of kb apart: intergenic size change hides
                 # a gene-sized deletion, so this scale tests synteny only
-                nv, ngap = pair_verdict(lhit, rhit, rgap_i, 0, qsizes, nfrac)
+                nv, ngap = pair_verdict(lhit, rhit, rgap_i, 0, qsizes, nrun)
                 if nv in ("empty_site", "present", "size_changed"):
                     r = int(ngap) / rgap_i if rgap_i else 0
                     nv = "syntenic" if PRESENT_LO <= r <= PRESENT_HI else "syntenic_size_changed"
