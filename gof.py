@@ -1,0 +1,285 @@
+#!/usr/bin/env python3
+"""gene_ortho_flanks: flank and neighbour-gene evidence for TOGA2 gene calls.
+
+For each reference gene: map its flanks (FLANKS, e.g. 1 kb and 10 kb next to the
+gene) to the query and place its nearest intact one2one neighbour genes, then
+call per scale: empty_site / present / size_changed / assembly_gap /
+assembly_edge / one_flank / synteny_broken / no_anchor.
+
+Usage: gof.py --toga TOGA_OUT --ref-bed BED12 --isoforms TSV --ref-2bit R.2bit
+              --query-2bit Q.2bit --query-index Q.mmi --genes GENES.txt --out DIR
+"""
+import argparse
+import bisect
+import collections
+import os
+import struct
+import subprocess
+import sys
+
+FLANKS = (1000, 10000)
+MIN_MAPQ = 20
+MIN_QCOV = 0.5          # aligned part of a flank ...
+MIN_ALIGNED = 300       # ... or at least this many bp (a 1 kb flank often aligns only next to the gene)
+EMPTY_FRAC = 0.2        # query gap <= 20 % of the gene span -> empty site
+PRESENT_LO, PRESENT_HI = 0.5, 2.0
+INTACT = ("FI", "I")
+
+
+def sh(cmd):
+    r = subprocess.run(cmd, shell=True, executable="/bin/bash")
+    if r.returncode:
+        sys.exit("failed: " + cmd)
+
+
+def read_genes(ref_bed, isoforms):
+    tx2gene = {}
+    with open(isoforms) as h:
+        for line in h:
+            g, t = line.rstrip("\n").split("\t")[:2]
+            tx2gene[t] = g
+    span = {}
+    with open(ref_bed) as h:
+        for line in h:
+            f = line.rstrip("\n").split("\t")
+            g = tx2gene.get(f[3])
+            if g is None:
+                continue
+            c, s, e, st = f[0], int(f[1]), int(f[2]), f[5]
+            if g in span:
+                c0, s0, e0, st0 = span[g]
+                if c0 != c:
+                    continue
+                span[g] = (c, min(s, s0), max(e, e0), st0)
+            else:
+                span[g] = (c, s, e, st)
+    return span
+
+
+def read_toga(toga):
+    status = {}
+    with open(os.path.join(toga, "loss_summary.tsv")) as h:
+        for line in h:
+            f = line.rstrip("\n").split("\t")
+            if f[0] == "GENE":
+                status[f[1]] = f[2]
+    proj = {}
+    with open(os.path.join(toga, "query_annotation.bed")) as h:
+        for line in h:
+            f = line.rstrip("\n").split("\t")
+            proj[f[3]] = (f[0], int(f[1]), int(f[2]), f[5])
+    o2o = {}
+    with open(os.path.join(toga, "orthology_classification.tsv")) as h:
+        next(h)
+        for line in h:
+            tg, tt, qg, qt, cls = line.rstrip("\n").split("\t")
+            if cls == "one2one" and qt in proj and tg not in o2o:
+                o2o[tg] = (tt, proj[qt])
+    # all query projections per reference gene (any status) for the gap check
+    tx2g = {}
+    with open(os.path.join(toga, "orthology_classification.tsv")) as h:
+        next(h)
+        for line in h:
+            f = line.rstrip("\n").split("\t")
+            tx2g[f[1]] = f[0]
+    gproj = collections.defaultdict(list)
+    for name, loc in proj.items():
+        tx = "#".join(name.split("#")[:2])
+        if tx in tx2g:
+            gproj[tx2g[tx]].append(loc)
+    return status, o2o, gproj
+
+
+def twobit_sizes(path):
+    """Sequence sizes from a 2bit header (version 0 and 1; twoBitInfo is not installed everywhere)."""
+    with open(path, "rb") as h:
+        sig, ver, cnt, _ = struct.unpack("<IIII", h.read(16))
+        if sig != 0x1A412743:
+            sys.exit("not a little-endian 2bit file: " + path)
+        off_fmt, off_len = ("<Q", 8) if ver == 1 else ("<I", 4)
+        index = []
+        for _ in range(cnt):
+            n = h.read(1)[0]
+            name = h.read(n).decode()
+            index.append((name, struct.unpack(off_fmt, h.read(off_len))[0]))
+        sizes = {}
+        for name, off in index:
+            h.seek(off)
+            sizes[name] = struct.unpack("<I", h.read(4))[0]
+    return sizes
+
+
+def neighbours(gene, span, by_contig, status, o2o):
+    c, s, e, st = span[gene]
+    lst = by_contig[c]
+    starts = [x[0] for x in lst]
+    i = bisect.bisect_left(starts, s)
+    left = right = None
+    for j in range(i - 1, -1, -1):
+        gs, ge, g = lst[j]
+        if ge <= s and status.get(g) in INTACT and g in o2o:
+            left = g
+            break
+    for j in range(i, len(lst)):
+        gs, ge, g = lst[j]
+        if gs >= e and status.get(g) in INTACT and g in o2o:
+            right = g
+            break
+    return left, right
+
+
+def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nfrac):
+    """lhit/rhit: (contig, inner_pos, strand) or None. ref_gap = what lies
+    between the two anchors in the reference (incl. the gene)."""
+    if lhit is None and rhit is None:
+        return "no_anchor", ""
+    if lhit is None or rhit is None:
+        c, p, st = lhit or rhit
+        room = min(p, qsizes.get(c, 0) - p)
+        return ("assembly_edge" if room < ref_gap else "one_flank"), ""
+    if lhit[0] != rhit[0] or lhit[2] != rhit[2]:
+        return "synteny_broken", ""
+    gap = (rhit[1] - lhit[1]) if lhit[2] == "+" else (lhit[1] - rhit[1])
+    # flanks may overlap in the query when the deletion took a little more than the gene
+    if gap < -max(1000, EMPTY_FRAC * gene_len):
+        return "synteny_broken", str(gap)
+    nf = nfrac(lhit[0], *sorted((lhit[1], rhit[1])))
+    if nf > 0.1:
+        return "assembly_gap", str(gap)
+    expected_empty = ref_gap - gene_len
+    if gap - expected_empty <= EMPTY_FRAC * gene_len:
+        return "empty_site", str(gap)
+    r = gap / ref_gap if ref_gap else 0
+    if PRESENT_LO <= r <= PRESENT_HI:
+        return "present", str(gap)
+    return "size_changed", str(gap)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    for a in ("toga", "ref-bed", "isoforms", "ref-2bit", "query-2bit", "query-index", "genes", "out"):
+        ap.add_argument("--" + a, required=True)
+    ap.add_argument("--threads", default="16")
+    ap.add_argument("--no-neighbours", action="store_true", help="toy queries: skip the neighbour-gene scale")
+    ap.add_argument("--minimap2", default="minimap2")
+    ap.add_argument("--mm2-opts", default="-x asm20 -N 5")
+    a = ap.parse_args()
+    os.makedirs(a.out, exist_ok=True)
+
+    span = read_genes(a.ref_bed, a.isoforms)
+    status, o2o, gproj = read_toga(a.toga)
+    by_contig = collections.defaultdict(list)
+    for g, (c, s, e, st) in span.items():
+        by_contig[c].append((s, e, g))
+    for c in by_contig:
+        by_contig[c].sort()
+    rsizes = twobit_sizes(a.ref_2bit)
+    qsizes = twobit_sizes(a.query_2bit)
+
+    genes = [l.split()[0] for l in open(a.genes) if l.strip()]
+    genes = [g for g in genes if g in span]
+
+    # flank BED: name = gene|side|size
+    bed = os.path.join(a.out, "flanks.bed")
+    with open(bed, "w") as h:
+        for g in genes:
+            c, s, e, st = span[g]
+            for fl in FLANKS:
+                ls, re_ = max(0, s - fl), min(rsizes[c], e + fl)
+                if s - ls >= 100:
+                    h.write(f"{c}\t{ls}\t{s}\t{g}|L|{fl}\n")
+                if re_ - e >= 100:
+                    h.write(f"{c}\t{e}\t{re_}\t{g}|R|{fl}\n")
+    fa = os.path.join(a.out, "flanks.fa")
+    paf = os.path.join(a.out, "flanks.paf")
+    sh(f"twoBitToFa -bed={bed} {a.ref_2bit} {fa}")
+    sh(f"{a.minimap2} -c {a.mm2_opts} -t {a.threads} {a.query_index} {fa} > {paf} 2> {paf}.log")
+
+    # Pieces of one flank: minimap2 splits a flank at large indels, so keep all
+    # primary pieces, choose the target (contig, strand) with the most aligned
+    # flank bases, and place the gene end from the piece nearest the gene side.
+    pieces = collections.defaultdict(list)
+    with open(paf) as h:
+        for line in h:
+            f = line.split("	")
+            if "tp:A:P" not in line or int(f[11]) < MIN_MAPQ:
+                continue
+            pieces[f[0]].append((int(f[1]), int(f[2]), int(f[3]), f[4], f[5], int(f[7]), int(f[8])))
+    hits = {}
+    for qn, ps in pieces.items():
+        g, side, fl = qn.split("|")
+        ql = ps[0][0]
+        cov = collections.Counter()
+        for _, qs, qe, strand, tn, ts, te in ps:
+            cov[(tn, strand)] += qe - qs
+        (tn, strand), aligned = cov.most_common(1)[0]
+        if aligned < min(MIN_QCOV * ql, MIN_ALIGNED):
+            continue
+        gpos = ql if side == "L" else 0          # gene side of the flank in flank coordinates
+        best = min((p for p in ps if (p[4], p[3]) == (tn, strand)),
+                   key=lambda p: abs((p[2] if side == "L" else p[1]) - gpos))
+        _, qs, qe, _, _, ts, te = best
+        if strand == "+":
+            inner = te + (gpos - qe) if side == "L" else ts - (qs - gpos)
+        else:
+            inner = ts - (gpos - qe) if side == "L" else te + (qs - gpos)
+        hits[(g, side, fl)] = (tn, inner, strand, aligned)
+
+    ncache = {}
+
+    def nfrac(c, s, e):
+        if e - s <= 0 or e - s > 5_000_000:
+            return 0.0
+        k = (c, s, e)
+        if k not in ncache:
+            seq = subprocess.run(["twoBitToFa", f"{a.query_2bit}:{c}:{s}-{e}", "stdout"],
+                                 capture_output=True, text=True, check=True).stdout
+            seq = "".join(seq.splitlines()[1:])
+            ncache[k] = seq.upper().count("N") / max(1, len(seq))
+        return ncache[k]
+
+    out = os.path.join(a.out, "verdicts.tsv")
+    cols = ["gene", "toga_status", "ref_locus", "gene_len"]
+    for fl in FLANKS:
+        cols += [f"f{fl}_verdict", f"f{fl}_query_gap", f"f{fl}_query"]
+    cols += ["nb_left", "nb_right", "nb_verdict", "nb_query_gap", "nb_ref_gap", "query_projection_in_gap"]
+    with open(out, "w") as h:
+        h.write("\t".join(cols) + "\n")
+        for g in genes:
+            c, s, e, st = span[g]
+            glen = e - s
+            row = [g, status.get(g, "NA"), f"{c}:{s}-{e}{st}", str(glen)]
+            qint = None
+            for fl in FLANKS:
+                lh = hits.get((g, "L", str(fl)))
+                rh = hits.get((g, "R", str(fl)))
+                v, gap = pair_verdict(lh and lh[:3], rh and rh[:3], glen, glen, qsizes, nfrac)
+                loc = ""
+                if lh and rh and lh[0] == rh[0]:
+                    lo, hi = sorted((lh[1], rh[1]))
+                    loc = f"{lh[0]}:{lo}-{hi}{lh[2]}"
+                    if qint is None:
+                        qint = (lh[0], lo, hi)
+                row += [v, gap, loc]
+            ln, rn = neighbours(g, span, by_contig, status, o2o)
+            nv, ngap, rgap = "no_neighbour", "", ""
+            if ln and rn and not a.no_neighbours:
+                lq, rq = o2o[ln][1], o2o[rn][1]
+                rgap_i = span[rn][1] - span[ln][2]
+                same = span[ln][3] == lq[3]          # neighbour keeps its strand -> '+' orientation
+                lhit = (lq[0], lq[2] if same else lq[1], "+" if same else "-")
+                rhit = (rq[0], rq[1] if same else rq[2], "+" if same else "-")
+                nv, ngap = pair_verdict(lhit, rhit, rgap_i, glen, qsizes, nfrac)
+                rgap = str(rgap_i)
+            row += [ln or "", rn or "", nv, ngap, rgap]
+            inside = ""
+            if qint:
+                inside = ",".join(f"{p[0]}:{p[1]}-{p[2]}" for p in gproj.get(g, [])
+                                  if p[0] == qint[0] and p[1] < qint[2] and p[2] > qint[1])
+            row.append(inside)
+            h.write("\t".join(row) + "\n")
+    print("wrote", out)
+
+
+if __name__ == "__main__":
+    main()
