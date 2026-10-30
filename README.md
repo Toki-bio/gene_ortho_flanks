@@ -89,6 +89,14 @@ size_changed / synteny_broken there are not trustworthy. The other 381 genes:
 present 194, no_anchor 108 (61 of them with neighbours syntenic but the
 neighbour interval changed size), one_flank 62, empty_site 2.
 
+Flank uniqueness (gof.py `NONUNIQUE_S2S1` = 0.8, minimap2 s2/s1 of the flank's
+strongest piece): verdict `flank_not_unique`. b2t, 1 kb: IG/TR 188 not unique, 2
+present (was 17); other L/M 29 not unique; FI controls 10/200 refused, toy unchanged.
+
+Alignments now span 10 kb each side and come with a BED track (`<gene>.bed`,
+ViewAlign `&bed=`): flanks 1/10 kb, reference transcripts (BED12 exons/introns/CDS),
+TOGA2 projections on the query row.
+
 ## Status
 
 2026-10-30: gof.py works on the first pair; next: why L/M flanks fail to place

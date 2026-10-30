@@ -24,6 +24,8 @@ MIN_ALIGNED = 300       # ... or at least this many bp (a 1 kb flank often align
 EMPTY_FRAC = 0.2        # query gap <= 20 % of the gene span -> empty site
 PRESENT_LO, PRESENT_HI = 0.5, 2.0
 INTACT = ("FI", "I")
+NONUNIQUE_S2S1 = 0.8    # flank whose best secondary chain scores >= 0.8 of the primary is not unique
+                        # (minimap2's own -p default; b2t: 4 % of FI-control vs 93 % of IG/TR flanks)
 MAX_SLACK = 100         # empty site needs aligned flank within this of the gene (or 20 % of its length)
 
 
@@ -208,13 +210,16 @@ def main():
             f = line.split("	")
             if "tp:A:P" not in line or int(f[11]) < MIN_MAPQ:
                 continue
-            pieces[f[0]].append((int(f[1]), int(f[2]), int(f[3]), f[4], f[5], int(f[7]), int(f[8])))
+            tags = dict(t.split(":", 2)[::2] for t in f[12:])
+            s1, s2 = int(tags.get("s1", 0)), int(tags.get("s2", 0))
+            pieces[f[0]].append((int(f[1]), int(f[2]), int(f[3]), f[4], f[5], int(f[7]), int(f[8]),
+                                 s2 / s1 if s1 else 0.0, s1))
     hits = {}
     for qn, ps in pieces.items():
         g, side, fl = qn.split("|")
         ql = ps[0][0]
         cov = collections.Counter()
-        for _, qs, qe, strand, tn, ts, te in ps:
+        for _, qs, qe, strand, tn, ts, te, _, _ in ps:
             cov[(tn, strand)] += qe - qs
         (tn, strand), aligned = cov.most_common(1)[0]
         if aligned < min(MIN_QCOV * ql, MIN_ALIGNED):
@@ -222,13 +227,15 @@ def main():
         gpos = ql if side == "L" else 0          # gene side of the flank in flank coordinates
         best = min((p for p in ps if (p[4], p[3]) == (tn, strand)),
                    key=lambda p: abs((p[2] if side == "L" else p[1]) - gpos))
-        _, qs, qe, _, _, ts, te = best
+        _, qs, qe, _, _, ts, te, _, _ = best
         if strand == "+":
             inner = te + (gpos - qe) if side == "L" else ts - (qs - gpos)
         else:
             inner = ts - (gpos - qe) if side == "L" else te + (qs - gpos)
         edge = best[2] if side == "L" else best[1]
-        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos))
+        # uniqueness from the strongest piece of the chosen target
+        s2s1 = max((p for p in ps if (p[4], p[3]) == (tn, strand)), key=lambda p: p[8])[7]
+        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos), s2s1)
 
     ncache = {}
 
@@ -260,6 +267,8 @@ def main():
                 rh = hits.get((g, "R", str(fl)))
                 slack = (lh[3] if lh else 0) + (rh[3] if rh else 0)
                 v, gap = pair_verdict(lh and lh[:3], rh and rh[:3], glen, glen, qsizes, nfrac, slack)
+                if any(x and x[4] >= NONUNIQUE_S2S1 for x in (lh, rh)):
+                    v = "flank_not_unique"
                 loc = ""
                 if lh and rh and lh[0] == rh[0]:
                     lo, hi = sorted((lh[1], rh[1]))
