@@ -43,6 +43,19 @@ rescue step paired both copies of a duplication with one site.
 Each confirmed deletion gets a reference-locus+flanks vs query-site alignment
 for viewing.
 
+## TOGA2 statuses used (from TOGA2 v2.0.10 source)
+
+- **N** is the lowest rank (-1). The reference transcript was rejected at setup,
+  before any projection: CDS length not a multiple of 3 (`OUT_OF_FRAME`,
+  input_producer.py ~l.839; 3,065 transcripts here) or `ILLEGAL_NAME` (202).
+  It says nothing about the query, so N genes are **not** deletion candidates.
+- **M** at transcript level: `NO_PROJ` (no classifiable projection, 527) or
+  `ALL_ORTHS_DISCARDED` (1,092). These are the main deletion candidates.
+- **L** projections with `NO_EXONS_ALIGNED` (96): a chain exists but no exon
+  aligned. These are candidates for an empty site inside a syntenic chain.
+
+Test set: gene-level L (112) + M (574).
+
 ## Status
 
 2026-10-30: repository started; inputs located.
