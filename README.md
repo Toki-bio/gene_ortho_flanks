@@ -77,6 +77,18 @@ size_changed 69, synteny_broken 54, empty_site 2. Neighbours syntenic 504.
 Empty sites, both flank scales agree and neighbours syntenic:
 EPS8L1 (L, 17,952 bp gene -> 272 bp in trizona), TMED4 (M, 2,947 bp -> 299 bp).
 
+Alignments (ViewAlign links): `results/b2t/aln/`. EPS8L1: one 17,679-column gap
+in trizona, 220 of 2,173 CDS bases still opposite trizona bases (3' end), flank
+identity 95.8 / 97.8 %. TMED4: one 2,652-column gap, 150 of 684 CDS bases
+opposite trizona bases, flanks 97.9 %. Both are deletions of most of the gene.
+
+Why flanks are not placed (tests/why_unplaced.py, tests/split_ig.sh): 305 of the
+686 L/M genes are IG/TR V/D/J segments (IGH array on ptg000106l, IGK on
+ptg000045l). Their flanks are array copies (MAPQ < 20 or a paralogous copy), so
+size_changed / synteny_broken there are not trustworthy. The other 381 genes:
+present 194, no_anchor 108 (61 of them with neighbours syntenic but the
+neighbour interval changed size), one_flank 62, empty_site 2.
+
 ## Status
 
 2026-10-30: gof.py works on the first pair; next: why L/M flanks fail to place
