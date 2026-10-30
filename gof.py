@@ -27,6 +27,8 @@ PRESENT_LO, PRESENT_HI = 0.5, 2.0
 INTACT = ("FI", "I")
 NONUNIQUE_S2S1 = 0.8    # flank whose best secondary chain scores >= 0.8 of the primary is not unique
                         # (minimap2's own -p default; b2t: 4 % of FI-control vs 93 % of IG/TR flanks)
+EDGE_FLANK = 1000       # edge scale: flank length at each edge of the unaligned stretch
+MAX_EDGE_RUN = 2_000_000
 MIN_N_RUN = 10          # N run between anchors that makes the interval an assembly gap
 MAX_SLACK = 100         # empty site needs aligned flank within this of the gene (or 20 % of its length)
 
@@ -133,6 +135,56 @@ def neighbours(gene, span, by_contig, status, o2o):
     return left, right
 
 
+def wga_unaligned(paf, contigs):
+    """Merged primary-aligned intervals of the reference (PAF query = reference genome,
+    as in a reference-vs-query whole-genome minimap2 run) for the given contigs."""
+    iv = collections.defaultdict(list)
+    with open(paf) as h:
+        for line in h:
+            f = line.split("\t", 13)
+            if f[0] in contigs and "tp:A:P" in line:
+                iv[f[0]].append((int(f[2]), int(f[3])))
+    merged = {}
+    for c, xs in iv.items():
+        xs.sort()
+        m = []
+        for s, e in xs:
+            if m and s <= m[-1][1]:
+                m[-1][1] = max(m[-1][1], e)
+            else:
+                m.append([s, e])
+        merged[c] = m
+    return merged
+
+
+def unaligned_run(merged, c, s, e):
+    """The reference stretch around the gene midpoint with no whole-genome alignment:
+    (left, right), or None when the midpoint is aligned or the stretch reaches a contig end."""
+    m = merged.get(c, [])
+    mid = (s + e) // 2
+    i = bisect.bisect_right([x[0] for x in m], mid) - 1
+    if i >= 0 and m[i][1] > mid:
+        return None
+    if i < 0 or i + 1 >= len(m):
+        return None
+    return m[i][1], m[i + 1][0]
+
+
+def gene_call(r):
+    """One call per gene from all scales. An assembly gap anywhere between anchors blocks
+    a deletion (EPS8L1/TMED4: a 100-N gap next to the site); a deletion needs an empty
+    site and no scale that sees sequence in its place."""
+    flank = [r.get(f"f{fl}_verdict", "") for fl in FLANKS] + [r.get("edge_verdict", "")]
+    if "assembly_gap" in flank or r.get("nb_verdict") == "assembly_gap":
+        return "assembly_gap"
+    seen = {"present", "size_changed", "not_empty"}
+    if "empty_site" in flank:
+        return "conflict" if seen & set(flank) else "deletion"
+    if "present" in flank:
+        return "present"
+    return "no_call"
+
+
 def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nrun, slack=0):
     """lhit/rhit: (contig, inner_pos, strand) or None. ref_gap = what lies
     between the two anchors in the reference (incl. the gene). slack = flank
@@ -175,6 +227,9 @@ def main():
     ap.add_argument("--no-neighbours", action="store_true", help="toy queries: skip the neighbour-gene scale")
     ap.add_argument("--minimap2", default="minimap2")
     ap.add_argument("--mm2-opts", default="-x asm20 -N 5")
+    ap.add_argument("--wga-paf", help="reference-vs-query whole-genome PAF (reference = PAF query); adds the "
+                    "'edge' scale: 1 kb flanks at the edges of the unaligned stretch around the gene, for "
+                    "losses larger than the fixed flanks")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
 
@@ -191,11 +246,26 @@ def main():
     genes = [l.split()[0] for l in open(a.genes) if l.strip()]
     genes = [g for g in genes if g in span]
 
+    # edge scale: unaligned stretch around the gene, only when it is longer than the
+    # gene and shorter than MAX_EDGE_RUN (a whole unaligned chromosome arm is no site)
+    runs = {}
+    if a.wga_paf:
+        merged = wga_unaligned(a.wga_paf, set(span[g][0] for g in genes))
+        for g in genes:
+            c, s, e, st = span[g]
+            r = unaligned_run(merged, c, s, e)
+            if r and r[1] - r[0] > e - s and r[1] - r[0] <= MAX_EDGE_RUN:
+                runs[g] = r
+
     # flank BED: name = gene|side|size
     bed = os.path.join(a.out, "flanks.bed")
     with open(bed, "w") as h:
         for g in genes:
             c, s, e, st = span[g]
+            if g in runs:
+                rl, rr = runs[g]
+                if rl >= EDGE_FLANK and rr + EDGE_FLANK <= rsizes[c]:
+                    h.write(f"{c}\t{rl - EDGE_FLANK}\t{rl}\t{g}|L|edge\n{c}\t{rr}\t{rr + EDGE_FLANK}\t{g}|R|edge\n")
             for fl in FLANKS:
                 ls, re_ = max(0, s - fl), min(rsizes[c], e + fl)
                 if s - ls >= 100:
@@ -213,7 +283,7 @@ def main():
     pieces = collections.defaultdict(list)
     with open(paf) as h:
         for line in h:
-            f = line.split("	")
+            f = line.split("\t")
             if "tp:A:P" not in line or int(f[11]) < MIN_MAPQ:
                 continue
             tags = dict(t.split(":", 2)[::2] for t in f[12:])
@@ -263,7 +333,8 @@ def main():
     cols = ["gene", "toga_status", "ref_locus", "gene_len"]
     for fl in FLANKS:
         cols += [f"f{fl}_verdict", f"f{fl}_query_gap", f"f{fl}_query"]
-    cols += ["nb_left", "nb_right", "nb_verdict", "nb_query_gap", "nb_ref_gap", "query_projection_in_gap"]
+    cols += ["edge_run", "edge_verdict", "edge_query_gap", "edge_query"]
+    cols += ["nb_left", "nb_right", "nb_verdict", "nb_query_gap", "nb_ref_gap", "query_projection_in_gap", "call"]
     with open(out, "w") as h:
         h.write("\t".join(cols) + "\n")
         for g in genes:
@@ -286,6 +357,26 @@ def main():
                     if qint is None:
                         qint = (lh[0], lo, hi)
                 row += [v, gap, loc]
+            ev = ["", "", "", ""]
+            if g in runs:
+                rl, rr = runs[g]
+                lh, rh = hits.get((g, "L", "edge")), hits.get((g, "R", "edge"))
+                slack = (lh[3] if lh else 0) + (rh[3] if rh else 0)
+                v, gap = pair_verdict(lh and (lh[0], lh[1], lh[2], lh[5]), rh and (rh[0], rh[1], rh[2], rh[5]),
+                                      rr - rl, rr - rl, qsizes, nrun, slack)
+                # the stretch did not align, so query sequence in its place is not the gene:
+                # only "empty or not" is meaningful at this scale (toy: unaligned flank parts
+                # left 2.8-20 kb behind a gene-only cut)
+                if v in ("present", "size_changed"):
+                    v = "not_empty"
+                if any(x and x[4] >= NONUNIQUE_S2S1 for x in (lh, rh)):
+                    v = "flank_not_unique"
+                loc = ""
+                if lh and rh and lh[0] == rh[0]:
+                    lo, hi = sorted((lh[1], rh[1]))
+                    loc = f"{lh[0]}:{lo}-{hi}{lh[2]}"
+                ev = [f"{c}:{rl}-{rr}", v, gap, loc]
+            row += ev
             ln, rn = neighbours(g, span, by_contig, status, o2o)
             nv, ngap, rgap = "no_neighbour", "", ""
             if ln and rn and not a.no_neighbours:
@@ -307,6 +398,7 @@ def main():
                 inside = ",".join(f"{p[0]}:{p[1]}-{p[2]}" for p in gproj.get(g, [])
                                   if p[0] == qint[0] and p[1] < qint[2] and p[2] > qint[1])
             row.append(inside)
+            row.append(gene_call(dict(zip(cols, row))))
             h.write("\t".join(row) + "\n")
     print("wrote", out)
 

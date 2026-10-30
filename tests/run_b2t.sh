@@ -20,9 +20,13 @@ if [ ! -s /home/toki/gof/trizona.asm20.mmi ]; then
   rm $TMPDIR/trizona.fa
 fi
 taskset -c 80-111 python3 $C/gof.py --toga $TO --ref-bed $T/sbe_ref_annotation.bed --isoforms $T/sbe_ref_isoforms.tsv \
-  --ref-2bit $T/sbe.2bit --query-2bit $Q --query-index /home/toki/gof/trizona.asm20.mmi --genes genes.txt --out $W/out --threads 32
+  --ref-2bit $T/sbe.2bit --query-2bit $Q --query-index /home/toki/gof/trizona.asm20.mmi --genes genes.txt --out $W/out --threads 32 \
+  --wga-paf $T/full/aln.paf
 echo "== test genes (TOGA2 L/M): f1000 | f10000 | neighbours"
-for c in 5 8 13; do echo "-- col $c"; awk -F'\t' -v c=$c 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){print $2"\t"$c}' test_genes.txt out/verdicts.tsv | sort | uniq -c | sort -k2,2 -k1,1nr; done
+for c in 5 8 12 17; do echo "-- col $c"; awk -F'\t' -v c=$c 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){print $2"\t"$c}' test_genes.txt out/verdicts.tsv | sort | uniq -c | sort -k2,2 -k1,1nr; done
 echo "== FI controls"
-for c in 5 8 13; do echo "-- col $c"; awk -F'\t' -v c=$c 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){print $c}' fi_controls.txt out/verdicts.tsv | sort | uniq -c | sort -k1,1nr; done
+for c in 5 8 12 17; do echo "-- col $c"; awk -F'\t' -v c=$c 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){print $c}' fi_controls.txt out/verdicts.tsv | sort | uniq -c | sort -k1,1nr; done
 echo done
+echo "== gene call: L/M (IG/TR apart) and FI controls"
+awk -F'\t' 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){ig=($1 ~ /^(IG[HKL]V|IG[HKL][DJ]|TR[ABGD]V|TR[ABGD]J)/)?"IG/TR":"other"; print ig"\t"$NF}' test_genes.txt out/verdicts.tsv | sort | uniq -c | sort -k2,2 -k1,1nr
+awk -F'\t' 'NR==FNR{t[$1]=1;next} FNR>1 && ($1 in t){print "FI\t"$NF}' fi_controls.txt out/verdicts.tsv | sort | uniq -c
