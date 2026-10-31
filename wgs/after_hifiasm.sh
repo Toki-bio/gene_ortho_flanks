@@ -13,15 +13,19 @@ READS=/home/toki/gof/reads/ERR16751478.fastq.gz
 step() { echo "#### $* -- $(date '+%F %T')"; }
 step "waiting for hifiasm wrapper $1"
 while kill -0 "$1" 2> /dev/null; do sleep 300; done
-grep -q '^done' run.log || { echo "hifiasm wrapper did not finish (run.log)"; exit 1; }
-for h in hap1 hap2; do [ -s tri.bp.$h.p_ctg.fa ] || { echo "missing tri.bp.$h.p_ctg.fa"; exit 1; }; done
+# hifiasm 0.16.1 without Hi-C/trio writes primary (p_ctg) + alternate (a_ctg), not hap1/hap2;
+# with -l0 the primary set keeps both alleles of most heterozygous regions.
+for h in p a; do
+  [ -s tri.bp.${h}_ctg.fa ] || awk '$1=="S"{print ">"$2"\n"$3}' tri.bp.${h}_ctg.gfa > tri.bp.${h}_ctg.fa
+  [ -s tri.bp.${h}_ctg.fa ] || { echo "missing tri.bp.${h}_ctg.fa"; exit 1; }
+done
 step gapfill
-python3 $C/gapfill.py $QFA gapfill hap1=tri.bp.hap1.p_ctg.fa hap2=tri.bp.hap2.p_ctg.fa --threads 32
+python3 $C/gapfill.py $QFA gapfill pri=tri.bp.p_ctg.fa alt=tri.bp.a_ctg.fa --threads 32
 cut -f6 gapfill/gaps.tsv | sort | uniq -c
-for h in hap1 hap2; do
-  step "map reads to $h"
-  minimap2 -x map-hifi -t 64 tri.bp.$h.p_ctg.fa $READS 2> map_$h.log > reads_vs_$h.paf
+for h in p a; do
+  step "map reads to ${h}_ctg"
+  minimap2 -x map-hifi -t 64 tri.bp.${h}_ctg.fa $READS 2> map_$h.log > reads_vs_$h.paf
 done
 step readcheck
-python3 $C/readcheck.py gapfill hap1=reads_vs_hap1.paf hap2=reads_vs_hap2.paf
+python3 $C/readcheck.py gapfill pri=reads_vs_p.paf alt=reads_vs_a.paf
 step finished
