@@ -21,6 +21,7 @@ WA=/home/toki/gof/wgs/tri.bp.a_ctg.fa
 export PATH=/home/toki/miniforge3/envs/hifiasm/bin:/home/toki/miniforge3/envs/jf/bin:/home/toki/miniforge3/envs/sinederella/bin:/home/toki/miniforge3/envs/asm25/bin:/home/toki/miniforge3/envs/lrtools/bin:$PATH
 export TMPDIR=/home/toki/tmp
 T=${T:-32}
+OVD=${OVD:-/home/toki/gof/asm2/round2}     # overlap merges (asm2_overlap.sh) folded into the merge when present
 if [ "$MODE" = toy ]; then ASMS="dep1"; else ASMS="dep1 dep2"; fi
 # NEW_ASM = none: only the hifiasm 0.16.1 -l0 sources (first in source order: wgsp)
 if [ "$NEW" = none ]; then SRC="wgsp=$WP wgsa=$WA"; FIRST=wgsp; else SRC="hicanu=$NEW wgsp=$WP wgsa=$WA"; FIRST=hicanu; fi
@@ -36,6 +37,9 @@ for a in $ASMS; do
   echo "#### measure $a $(date '+%F %T')"
   python3 $C/asm2_measure.py gf_$a/gaps.tsv gf_$a/fill_cn.tsv gf_$a/fills.fa $CA $R1/repairs.tsv $a $a
   G2=$(cat $a.gaps2.txt)
+  if [ -s "$OVD/ov_$a/repairs.tsv" ]; then          # gaps already closed by an accepted overlap merge stay out
+    G2=$(awk -F'\t' -v g="$G2" 'NR>1 && $14=="yes"{d[$2]=1} END{n=split(g,a,","); s=""; for(i=1;i<=n;i++) if(!(a[i] in d)) s=s (s==""?"":",") a[i]; print s}' "$OVD/ov_$a/repairs.tsv")
+  fi
   if [ "$MODE" = toy ]; then G2=${TOY_GAPS:-$(cut -d, -f1-6 $a.gaps2.txt)}; fi
   [ -n "$G2" ] || { echo "no gaps for round 2 in $a"; continue; }
   echo "#### plan $a $(date '+%F %T')"
@@ -66,7 +70,9 @@ for a in $ASMS; do
   python3 $C/repair_gaps.py verify $GF r2_$a fished.fq $a $T --edited-only
   rm -f r2_$a/$a.repaired.fa r2_$a/$a.genesearch.fa       # round-2-only sequences; merged below
   echo "#### merge $a $(date '+%F %T')"
-  python3 $C/asm2_merge.py $GF $R1/$a r2_$a $a . | tee $a.merge.txt
+  R2D=r2_$a
+  [ -s "$OVD/ov_$a/repairs.tsv" ] && R2D=$R2D,$OVD/ov_$a
+  python3 $C/asm2_merge.py $GF $R1/$a $R2D $a . | tee $a.merge.txt
 done
 pigz -p 8 -f fished.fq
 echo "#### done $(date '+%F %T')"
