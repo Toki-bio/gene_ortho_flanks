@@ -1,0 +1,120 @@
+--- a/Overlaps.cpp
++++ b/Overlaps.cpp
+@@ -18892,10 +18892,94 @@
+     return n_reduced;
+ }
+ 
+-uint8_t if_primary_unitig(ma_utg_t* u, asg_t* read_g, ma_sub_t* coverage_cut, 
++/* ---- GC correction of per-read coverage in if_primary_unitig (gene_ortho_flanks patch) ----
++ * HIFIASM_GC_CORR unset/""/0/off : stock behaviour (integer C = C_bases/R_bases).
++ * HIFIASM_GC_CORR=on|1           : default table below (S. trizona HiFi, two-copy depth / genome two-copy depth).
++ * HIFIASM_GC_CORR="gc:f,gc:f,..." : own table (GC in %, ascending); linear interpolation, clamped at the ends.
++ * Per read: C' = (C_bases/R_bases) / f(GC of the read), GC from the (corrected) read held in R_INF. */
++static float *gcc_fac = NULL;
++static int gcc_on = 0;
++static pthread_once_t gcc_once = PTHREAD_ONCE_INIT;
++static double gcc_x[64], gcc_y[64];
++static int gcc_n = 0;
++static UC_Read *gcc_buf = NULL;
++
++static double gcc_interp(double g)
++{
++    int i;
++    if(g <= gcc_x[0]) return gcc_y[0];
++    if(g >= gcc_x[gcc_n-1]) return gcc_y[gcc_n-1];
++    for (i = 1; i < gcc_n; i++) {
++        if(g <= gcc_x[i]) return gcc_y[i-1] + (gcc_y[i]-gcc_y[i-1])*(g-gcc_x[i-1])/(gcc_x[i]-gcc_x[i-1]);
++    }
++    return gcc_y[gcc_n-1];
++}
++
++static void gcc_worker(void *data, long i, int tid)
++{
++    UC_Read *r = &(gcc_buf[tid]);
++    long long k, gc = 0, at = 0;
++    if(Get_READ(R_INF, i) == NULL) { gcc_fac[i] = 1.0f; return; }
++    recover_UC_Read(r, &R_INF, i);
++    for (k = 0; k < r->length; k++) {
++        char c = r->seq[k];
++        if(c == 'G' || c == 'C' || c == 'g' || c == 'c') gc++;
++        else if(c == 'A' || c == 'T' || c == 'a' || c == 't') at++;
++    }
++    gcc_fac[i] = (gc + at > 0)? (float)gcc_interp(100.0*(double)gc/(double)(gc+at)) : 1.0f;
++}
++
++static void gcc_init_once(void)
++{
++    const char *s = getenv("HIFIASM_GC_CORR");
++    double t0 = yak_realtime();
++    long i, n_r = (long)R_INF.total_reads;
++    if(s == NULL || s[0] == 0 || strcmp(s, "0") == 0 || strcmp(s, "off") == 0) {
++        gcc_on = 0;
++        fprintf(stderr, "[M::gc_corr] GC correction of primary-unitig read coverage: off\n");
++        return;
++    }
++    if(strcmp(s, "1") == 0 || strcmp(s, "on") == 0) {
++        static const double dx[4] = {36.0, 44.0, 52.0, 56.0}, dy[4] = {1.205, 0.94, 0.755, 0.72};
++        for (gcc_n = 0; gcc_n < 4; gcc_n++) gcc_x[gcc_n] = dx[gcc_n], gcc_y[gcc_n] = dy[gcc_n];
++    } else {
++        const char *p = s; char *q;
++        gcc_n = 0;
++        while (*p && gcc_n < 64) {
++            gcc_x[gcc_n] = strtod(p, &q); if(q == p || *q != ':') break;
++            p = q + 1; gcc_y[gcc_n] = strtod(p, &q); if(q == p || gcc_y[gcc_n] <= 0) break;
++            gcc_n++; p = q; if(*p == ',') p++;
++        }
++        if(gcc_n < 1 || *p) { fprintf(stderr, "[E::gc_corr] cannot parse HIFIASM_GC_CORR='%s'\n", s); exit(1); }
++        for (i = 1; i < gcc_n; i++) if(gcc_x[i] <= gcc_x[i-1]) { fprintf(stderr, "[E::gc_corr] GC values must ascend\n"); exit(1); }
++    }
++    fprintf(stderr, "[M::gc_corr] GC correction of primary-unitig read coverage: ON, table (GC%%:factor)");
++    for (i = 0; i < gcc_n; i++) fprintf(stderr, " %.2f:%.4f", gcc_x[i], gcc_y[i]);
++    fprintf(stderr, " (linear, clamped); C' = C / factor(read GC)\n");
++    gcc_fac = (float*)malloc(sizeof(float) * (n_r > 0? n_r : 1));
++    gcc_buf = (UC_Read*)calloc(asm_opt.thread_num, sizeof(UC_Read));
++    for (i = 0; i < asm_opt.thread_num; i++) init_UC_Read(&gcc_buf[i]);
++    kt_for(asm_opt.thread_num, gcc_worker, NULL, n_r);
++    for (i = 0; i < asm_opt.thread_num; i++) destory_UC_Read(&gcc_buf[i]);
++    free(gcc_buf); gcc_buf = NULL;
++    {
++        long h[6] = {0,0,0,0,0,0};
++        double sf = 0;
++        for (i = 0; i < n_r; i++) {
++            float f = gcc_fac[i]; sf += f;
++            h[f >= 1.1f? 0 : f >= 1.0f? 1 : f >= 0.9f? 2 : f >= 0.8f? 3 : f >= 0.75f? 4 : 5]++;
++        }
++        fprintf(stderr, "[M::gc_corr] %ld reads, mean factor %.4f; factor >=1.1: %ld, [1,1.1): %ld, [0.9,1): %ld, [0.8,0.9): %ld, [0.75,0.8): %ld, <0.75: %ld; %.1f s\n",
++            n_r, n_r? sf/n_r : 0.0, h[0], h[1], h[2], h[3], h[4], h[5], yak_realtime() - t0);
++    }
++    gcc_on = 1;
++}
++
++uint8_t if_primary_unitig(ma_utg_t* u, asg_t* read_g, ma_sub_t* coverage_cut,
+ ma_hit_t_alloc* sources, R_to_U* ruIndex, uint8_t* r_flag)
+ {
+     if(asm_opt.recover_atg_cov_min < 0 || asm_opt.recover_atg_cov_max < 0) return 0;
++    pthread_once(&gcc_once, gcc_init_once);
+     long long R_bases = 0, C_bases = 0, C_bases_primary = 0, C_bases_alter = 0;
+     long long total_C_bases = 0, total_C_bases_primary = 0;
+     uint32_t available_reads = 0, k, j, rId, tn, is_Unitig;
+@@ -18936,11 +19020,18 @@
+         }
+ 
+         C_bases = C_bases_primary + C_bases_alter;
+-        total_C_bases += C_bases; 
++        total_C_bases += C_bases;
+         ///if(C_bases_primary < C_bases * ALTER_COV_THRES) continue;
+ 
+-        C_bases = C_bases/R_bases;
+-        if(C_bases >= asm_opt.recover_atg_cov_min && C_bases <= asm_opt.recover_atg_cov_max)
++        int gcc_pass;
++        if(gcc_on) {
++            double Cd = ((double)C_bases)/((double)R_bases)/((double)gcc_fac[rId]);
++            gcc_pass = (Cd >= asm_opt.recover_atg_cov_min && Cd <= asm_opt.recover_atg_cov_max);
++        } else {
++            C_bases = C_bases/R_bases;
++            gcc_pass = (C_bases >= asm_opt.recover_atg_cov_min && C_bases <= asm_opt.recover_atg_cov_max);
++        }
++        if(gcc_pass)
+         {
+             if(C_bases_primary >= (C_bases_primary + C_bases_alter) * ALTER_COV_THRES) available_reads++;
+             total_C_bases_primary += C_bases_primary;
