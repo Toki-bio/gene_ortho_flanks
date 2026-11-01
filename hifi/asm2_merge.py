@@ -7,13 +7,14 @@ edits are an error. Round-2 junctions were read-verified in windows that carry o
 a round-1 edit within WIN bp is listed (near_r1) - its crossing reads saw the deposited sequence there instead.
 
 Usage: asm2_merge.py DEPOSITED.fa R1_DIR R2_DIR LABEL OUT_DIR
-  R?_DIR: repair_gaps.py work dir of this haplotype (plan.tsv, pieces.fa, repairs.tsv)
+  R?_DIR: repair_gaps.py work dir of this haplotype (plan.tsv, pieces.fa, repairs.tsv); R2_DIR may be a comma list
+          (e.g. r2_dep1,ov_dep1: new-source fills + overlap merges from asm2_overlap.py)
   -> OUT_DIR/LABEL.repaired2.fa (main: round-1 + round-2 insert/join), OUT_DIR/LABEL.genesearch2.fa (+ gene-search
      inserts in lower case), OUT_DIR/LABEL.repaired2.bed / .genesearch2.bed, OUT_DIR/LABEL.changes2.tsv, summary to stdout"""
 import os
 import re
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from repair_gaps import read_fa, write_fa  # noqa: E402
@@ -42,9 +43,12 @@ def edits(d, rnd):
     return res
 
 
-e1, e2 = edits(r1, 1), (edits(r2, 2) if r2 != "none" else [])   # none: round 1 only (oracle = repair_gaps output)
+e1 = edits(r1, 1)
+e2 = [] if r2 == "none" else sum((edits(d, 2) for d in r2.split(",")), [])   # none: round 1 only (oracle)
 g1 = {e["gap"] for e in e1}
 dup = [e["gap"] for e in e2 if e["gap"] in g1]
+c2 = Counter(e["gap"] for e in e2)
+assert all(v == 1 for v in c2.values()), "a gap repaired twice in round 2"
 assert not dup, f"round 2 repeats round-1 gaps {dup[:5]}"
 by = defaultdict(list)
 for e in e1 + e2:
