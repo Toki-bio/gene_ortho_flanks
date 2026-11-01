@@ -221,6 +221,50 @@ def pair_verdict(lhit, rhit, ref_gap, gene_len, qsizes, nrun, slack=0):
     return "size_changed", str(gap)
 
 
+def place_flanks(paf):
+    """Flank PAF (names gene|side|size) -> {(gene, side, size): (contig, inner_pos, strand, slack,
+    s2/s1, aligned_gene_side_edge)}."""
+    # Pieces of one flank: minimap2 splits a flank at large indels, so keep all
+    # primary pieces, choose the target (contig, strand) with the most aligned
+    # flank bases, and place the gene end from the piece nearest the gene side.
+    pieces = collections.defaultdict(list)
+    with open(paf) as h:
+        for line in h:
+            f = line.split("\t")
+            if "tp:A:P" not in line or int(f[11]) < MIN_MAPQ:
+                continue
+            tags = dict(t.split(":", 2)[::2] for t in f[12:])
+            s1, s2 = int(tags.get("s1", 0)), int(tags.get("s2", 0))
+            pieces[f[0]].append((int(f[1]), int(f[2]), int(f[3]), f[4], f[5], int(f[7]), int(f[8]),
+                                 s2 / s1 if s1 else 0.0, s1))
+    hits = {}
+    for qn, ps in pieces.items():
+        g, side, fl = qn.split("|")
+        ql = ps[0][0]
+        cov = collections.Counter()
+        for _, qs, qe, strand, tn, ts, te, _, _ in ps:
+            cov[(tn, strand)] += qe - qs
+        (tn, strand), aligned = cov.most_common(1)[0]
+        if aligned < min(MIN_QCOV * ql, MIN_ALIGNED):
+            continue
+        gpos = ql if side == "L" else 0          # gene side of the flank in flank coordinates
+        best = min((p for p in ps if (p[4], p[3]) == (tn, strand)),
+                   key=lambda p: abs((p[2] if side == "L" else p[1]) - gpos))
+        _, qs, qe, _, _, ts, te, _, _ = best
+        if strand == "+":
+            inner = te + (gpos - qe) if side == "L" else ts - (qs - gpos)
+        else:
+            inner = ts - (gpos - qe) if side == "L" else te + (qs - gpos)
+        edge = best[2] if side == "L" else best[1]
+        # uniqueness from the strongest piece of the chosen target
+        s2s1 = max((p for p in ps if (p[4], p[3]) == (tn, strand)), key=lambda p: p[8])[7]
+        # target position of the aligned piece's gene-side end
+        tedge = (te if side == "L" else ts) if strand == "+" else (ts if side == "L" else te)
+        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos), s2s1, tedge)
+
+    return hits
+
+
 def main():
     ap = argparse.ArgumentParser()
     for a in ("toga", "ref-bed", "isoforms", "ref-2bit", "query-2bit", "query-index", "genes", "out"):
@@ -279,43 +323,7 @@ def main():
     sh(f"twoBitToFa -bed={bed} {a.ref_2bit} {fa}")
     sh(f"{a.minimap2} -c {a.mm2_opts} -t {a.threads} {a.query_index} {fa} > {paf} 2> {paf}.log")
 
-    # Pieces of one flank: minimap2 splits a flank at large indels, so keep all
-    # primary pieces, choose the target (contig, strand) with the most aligned
-    # flank bases, and place the gene end from the piece nearest the gene side.
-    pieces = collections.defaultdict(list)
-    with open(paf) as h:
-        for line in h:
-            f = line.split("\t")
-            if "tp:A:P" not in line or int(f[11]) < MIN_MAPQ:
-                continue
-            tags = dict(t.split(":", 2)[::2] for t in f[12:])
-            s1, s2 = int(tags.get("s1", 0)), int(tags.get("s2", 0))
-            pieces[f[0]].append((int(f[1]), int(f[2]), int(f[3]), f[4], f[5], int(f[7]), int(f[8]),
-                                 s2 / s1 if s1 else 0.0, s1))
-    hits = {}
-    for qn, ps in pieces.items():
-        g, side, fl = qn.split("|")
-        ql = ps[0][0]
-        cov = collections.Counter()
-        for _, qs, qe, strand, tn, ts, te, _, _ in ps:
-            cov[(tn, strand)] += qe - qs
-        (tn, strand), aligned = cov.most_common(1)[0]
-        if aligned < min(MIN_QCOV * ql, MIN_ALIGNED):
-            continue
-        gpos = ql if side == "L" else 0          # gene side of the flank in flank coordinates
-        best = min((p for p in ps if (p[4], p[3]) == (tn, strand)),
-                   key=lambda p: abs((p[2] if side == "L" else p[1]) - gpos))
-        _, qs, qe, _, _, ts, te, _, _ = best
-        if strand == "+":
-            inner = te + (gpos - qe) if side == "L" else ts - (qs - gpos)
-        else:
-            inner = ts - (gpos - qe) if side == "L" else te + (qs - gpos)
-        edge = best[2] if side == "L" else best[1]
-        # uniqueness from the strongest piece of the chosen target
-        s2s1 = max((p for p in ps if (p[4], p[3]) == (tn, strand)), key=lambda p: p[8])[7]
-        # target position of the aligned piece's gene-side end
-        tedge = (te if side == "L" else ts) if strand == "+" else (ts if side == "L" else te)
-        hits[(g, side, fl)] = (tn, inner, strand, abs(edge - gpos), s2s1, tedge)
+    hits = place_flanks(paf)
 
     ncache = {}
 
