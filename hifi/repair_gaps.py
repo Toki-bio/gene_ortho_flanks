@@ -7,6 +7,8 @@ Cause per gap (gap_classify.py label) -> action:
                                haplotype, else an asm25 fill whose fill_cn call is two_copies)
   fill_nocall                  no fill from the other deposited haplotype: decided by the asm25 fill's fill_cn call,
                                two_copies -> insert (A); one_copy / unclear / short -> genesearch (B); repeat -> leave
+  chrX_fill                    (round 2 only, asm2_measure.py) unspanned chrX gap now spanned: male X has one copy, so a
+                               non-repeat fill of any copy-number call is inserted into the main assembly
   join                         join (C: flanks adjacent in another assembly; the <= 200 bp between them are inserted,
                                overlapping flanks are kept once)
   one_copy_fill, fill_unclear, fill_short_or_unscored
@@ -168,6 +170,8 @@ def plan(argv):
                 act, cand = "leave", []
             else:
                 act, cand = "genesearch", [l for l in sp if call.get((gid, l)) != "repeat"]
+        elif cs == "chrX_fill":                       # round 2 (asm2): male X = one copy, any non-repeat fill is it
+            act, cand = "insert", [l for l in sp if call.get((gid, l)) != "repeat"]
         elif cs == "join":
             act, cand = "join", [l for l in sp if fseq[(gid, l)][2] <= 200]
         elif cs in B_CAUSES:
