@@ -9,7 +9,7 @@ junction, genome-wide mapping to the haploid gene-search assembly, so MAPQ is me
 count phased reads that CROSS (one alignment reaching >= 1 kb into both flank and piece) and phased reads that come
 from the flank and STOP within 1.5 kb of the junction (clip = >= 1 kb of read left unaligned; readend otherwise).
   both  : ref and alt each >= 2 crossing reads  -> two copies carry the piece
-  one   : one allele >= 4 crossing, the other 0 -> one copy
+  one   : one allele >= 6 crossing, the other 0 -> one copy (2 x 0.5^6 = 0.03 under equal sampling)
 Het sites INSIDE the piece (alt fraction 0.25-0.75) are counted too: they mean two different piece copies exist.
 
 Test B (Hi-C, allele-specific contacts): Hi-C pairs fished by 31-mers carrying either allele of the flank het sites,
@@ -323,6 +323,50 @@ def load_het(p):
 
 
 # ---------------------------------------------------------------- phase (test A)
+def read_hap(al, orient):
+    """'ref' / 'alt' (haplotype carrying the assembly allele / the other allele at the anchor site), 'mix' or 'unph'"""
+    v = [b ^ orient[x] for x, b in al.items() if x in orient]
+    if not v:
+        return "unph"
+    k = sum(v) / len(v)
+    return "ref" if k <= 0.2 else ("alt" if k >= 0.8 else "mix")
+
+
+def local_phase(reads, J):
+    """Phase the het sites near junction J from the reads themselves (robust to switch errors in the assembly).
+    Anchor = the site closest to J with >= 3 reads of each allele; other sites are added (closest first, repeated
+    passes) when >= 3 reads already phased by the chosen sites carry them and >= 80 % agree on one orientation.
+    Returns {site: 0 (assembly allele = anchor's assembly-allele haplotype) or 1 (flipped)}."""
+    cov = defaultdict(list)
+    for r in reads.values():
+        for x, b in r["al"].items():
+            cov[x].append(b)
+    cand = sorted(cov, key=lambda x: abs(x - J))
+    anchor = next((x for x in cand if cov[x].count(0) >= 3 and cov[x].count(1) >= 3), None)
+    if anchor is None:
+        return {}
+    orient = {anchor: 0}
+    changed = True
+    while changed:
+        changed = False
+        for x in cand:
+            if x in orient or min(cov[x].count(0), cov[x].count(1)) < 2:
+                continue
+            same = diff = 0
+            for r in reads.values():
+                if x not in r["al"]:
+                    continue
+                h = read_hap(r["al"], orient)
+                if h == "ref":
+                    same += r["al"][x] == 0; diff += r["al"][x] == 1
+                elif h == "alt":
+                    same += r["al"][x] == 1; diff += r["al"][x] == 0
+            if same + diff >= 3 and max(same, diff) / (same + diff) >= 0.8:
+                orient[x] = 0 if same >= diff else 1
+                changed = True
+    return orient
+
+
 def phase(a):
     loci_p, het_p, f1, f2, outp = a
     loci = load_loci(loci_p)
@@ -345,7 +389,7 @@ def phase(a):
         for side, J in (("L", ps), ("R", pe)):
             fl = [x for x in hp if (J - F <= x < J if side == "L" else J <= x < J + F)]
             near = sum(1 for x in fl if abs(x - J) <= NEAR)
-            reads = defaultdict(lambda: {"ref": 0, "alt": 0, "cross": False, "stop": None, "dist": None})
+            reads = defaultdict(lambda: {"al": {}, "cross": False, "stop": None, "dist": None, "pen": 0, "span": False})
             alist = by_t.get((asm, c), [])
             for q, ql, qs, qe, st, t, ts, te, cs, _ in alist:
                 if ts > J + F or te < J - F:
@@ -367,23 +411,28 @@ def phase(a):
                 r = reads[q]
                 for x, b in al.items():
                     if b == "=":
-                        r["ref"] += 1
+                        r["al"][x] = 0
                     elif b == H[x][1]:
-                        r["alt"] += 1
+                        r["al"][x] = 1
                 if cross:
                     r["cross"] = True
+                    r["pen"] = max(r["pen"], (min(te, pe) - J) if side == "L" else (J - max(ts, ps)))
+                    r["span"] = r["span"] or (ts <= ps - J_IN and te >= pe + J_IN)
                 else:
                     if r["dist"] is None or dist < r["dist"]:
                         r["dist"] = dist
                     if stop and r["stop"] is None:
                         r["stop"] = "clip" if rest >= 1000 else "readend"
+            orient = local_phase(reads, J)
             cnt = Counter()
             closest = {}
+            pen = {}
             for q, r in reads.items():
-                n = r["ref"] + r["alt"]
-                g = "unph" if n == 0 else ("ref" if r["ref"] / n >= 0.8 else ("alt" if r["alt"] / n >= 0.8 else "mix"))
+                g = read_hap(r["al"], orient)
                 if r["cross"]:
                     cnt[(g, "cross")] += 1
+                    cnt[(g, "span")] += r["span"]
+                    pen[g] = max(pen.get(g, 0), r["pen"])
                     continue
                 cnt[(g, "approach")] += 1
                 closest[g] = min(closest.get(g, 10 ** 9), r["dist"])
@@ -392,7 +441,7 @@ def phase(a):
             rc_, ac_ = cnt[("ref", "cross")], cnt[("alt", "cross")]
             if min(rc_, ac_) >= 2:
                 v = "both"
-            elif min(rc_, ac_) == 0 and max(rc_, ac_) >= 4:
+            elif min(rc_, ac_) == 0 and max(rc_, ac_) >= 6:
                 v = "one"
             elif max(rc_, ac_) + min(rc_, ac_) >= 2:
                 v = "weak"
@@ -402,7 +451,8 @@ def phase(a):
             jrows.append([lid, cat, asm, c, side, J, len(fl), near, rc_, ac_, cnt[("unph", "cross")], cnt[("mix", "cross")],
                           cnt[("ref", "stop_clip")], cnt[("alt", "stop_clip")], cnt[("ref", "stop_readend")],
                           cnt[("alt", "stop_readend")], cnt[("unph", "stop_clip")], cnt[("ref", "approach")],
-                          cnt[("alt", "approach")], closest.get("ref", "-"), closest.get("alt", "-"), v])
+                          cnt[("alt", "approach")], closest.get("ref", "-"), closest.get("alt", "-"),
+                          cnt[("ref", "span")], cnt[("alt", "span")], pen.get("ref", "-"), pen.get("alt", "-"), v])
         if "both" in verdicts and "one" in verdicts:
             lv = "conflict"
         elif "both" in verdicts:
@@ -420,7 +470,8 @@ def phase(a):
     with open(outp + ".junctions.tsv", "w") as fh:
         fh.write("locus\tcat\tasm\tchrom\tside\tjunction\tflank_het\tflank_het_10kb\tref_cross\talt_cross\tunph_cross\t"
                  "mix_cross\tref_stop_clip\talt_stop_clip\tref_stop_readend\talt_stop_readend\tunph_stop_clip\t"
-                 "ref_approach20k\talt_approach20k\tref_closest_end\talt_closest_end\tverdict\n")
+                 "ref_approach20k\talt_approach20k\tref_closest_end\talt_closest_end\tref_span\talt_span\tref_max_into_piece\t"
+                 "alt_max_into_piece\tverdict\n")
         for r in jrows:
             fh.write("\t".join(map(str, r)) + "\n")
     with open(outp + ".loci.tsv", "w") as fh:

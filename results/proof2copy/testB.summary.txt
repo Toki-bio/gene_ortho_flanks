@@ -1,0 +1,8 @@
+cat1	n=123	conflict:1 two_copy:96 unclear:2 untestable:24
+cat1	pooled testable sides: lower-allele piece frac 0.048 (4662/97724), higher-allele 0.060 (5894/97427)
+cat2	n=60	two_copy:37 unclear:9 untestable:14
+cat2	pooled testable sides: lower-allele piece frac 0.020 (868/43740), higher-allele 0.028 (1215/43729)
+ctl_rand	n=40	two_copy:27 unclear:3 untestable:10
+ctl_rand	pooled testable sides: lower-allele piece frac 0.048 (1882/39187), higher-allele 0.055 (2158/38898)
+ctl_het	n=2	one_copy:1 unclear:1
+ctl_het	pooled testable sides: lower-allele piece frac 0.000 (0/1720), higher-allele 0.035 (70/1993)

@@ -1,0 +1,4 @@
+cat1	n=123	conflict:4 one_copy:7 two_copy:58 untestable:16 weak:38	piece_het>0:78	median_flank_het_per_kb:1.895
+cat2	n=60	conflict:4 one_copy:8 two_copy:21 untestable:3 weak:24	piece_het>0:21	median_flank_het_per_kb:2.272
+ctl_rand	n=40	conflict:3 one_copy:3 two_copy:29 untestable:4 weak:1	piece_het>0:32	median_flank_het_per_kb:2.535
+ctl_het	n=2	one_copy:1 weak:1	piece_het>0:0	median_flank_het_per_kb:2.712
