@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="ref.fa" hasGeneTrack="false" hasSequenceTrack="true" locus="tri_hap1_OZ418350.1_110982846-111075262:40000-52000 tri_hap2_OZ418090.1_110244645-110400691:40000-105000" version="8">
+    <Resources>
+        <Resource path="reads.bam" type="bam"/>
+        <Resource path="ref.bed" type="bed"/>
+    </Resources>
+    <Panel height="600" name="DataPanel" width="1400">
+        <Track attributeKey="reads.bam Coverage" autoScale="true" id="reads.bam_coverage" name="HiFi coverage" showReference="false" visible="true"/>
+        <Track attributeKey="reads.bam" id="reads.bam" name="HiFi reads ERR16751478 (MAPQ>=20, aligned >=3 kb)" visible="true"/>
+    </Panel>
+    <Panel height="60" name="FeaturePanel" width="1400">
+        <Track attributeKey="ref.bed" id="ref.bed" name="TMEM114" visible="true"/>
+    </Panel>
+    <PanelLayout dividerFractions="0.8"/>
+</Session>
