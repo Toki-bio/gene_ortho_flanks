@@ -1,0 +1,32 @@
+animal-level call	n
+present_both	130
+present_one_hap	36
+homozygous_deletion	19
+unknown	3
+heterozygous_deletion	2
+present	1
+
+gap causes of N runs in the locus window, haplotypes called gap (one count per haplotype x gap)
+fill_unclear	12
+one_copy_fill	11
+hom_one_hap	3
+high_copy	2
+tandem	1
+
+prev_call x animal
+assembly_gap	present_both	111
+assembly_gap	present_one_hap	36
+assembly_gap	unknown	3
+conflict	present_both	2
+deletion	heterozygous_deletion	2
+deletion	homozygous_deletion	19
+present	present	1
+present	present_both	17
+
+heterozygous_deletion: SMCO1_12 TMEM114_52
+
+homozygous_deletion: CYP3A43_220 CYP3A5_2827 IGKV2-24_40812 IGKV2-24_9724 IGKV2-28_3128 IGKV2-28_38308 IGKV2-30_13000 IGKV2-30_22141 IGKV2D-24_16679 IGKV2D-26_2674 IGKV2D-26_3518 IGKV2D-28_30525 IGKV2D-29_5346 IGKV2D-30_1908 OR5B2_284 OR7D4_4244 OR7E24_28287 SCGB1D1_84143 SCGB1D2_616670
+
+present_one_hap: ABHD17A_250 ACTR1B_247 ADM2_415 APOM_51 ARRDC1_523 B3GNT3_369 C2orf66_18 CCDC61_145 CD79A_145 CEACAM19_145 CLEC2L_1 COX5B_247 CSF3_44 CSNK2B_51 DMRTC1B_27301 DMRTC1_27270 DMRTC2_145 DPH7_523 ENSG00000289760_220 EPS8L1_237 ERFL_145 FCHO1_369 GPANK1_51 HOOK2_255 INSL3_369 LY6G5B_51 MAP1S_369 MRPL41_523 NOSIP_371 PATZ1_118 PSMD3_44 RAB19_1 RHNO1_410 RPS19_145 TMED4_20 TSEN34_237
+
+unknown: IGKV3-11_8505 IGKV3-15_1861 IGKV3-7_43217

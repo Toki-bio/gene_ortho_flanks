@@ -1,0 +1,1434 @@
+assembly	gap	contig	start1	end1	final_state	round	action	verdict	lr_status	lr_cause
+dep1	gap0001	OZ418341.1	735805	735904	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0002	OZ418341.1	4497471	4497570	N				UNRESOLVED	tandem
+dep1	gap0003	OZ418341.1	4552816	4552915	N				UNRESOLVED	tandem
+dep1	gap0004	OZ418341.1	9904350	9904449	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0005	OZ418341.1	10805475	10805574	N				UNRESOLVED	dropout
+dep1	gap0006	OZ418341.1	10874151	10874250	N				UNRESOLVED	tandem
+dep1	gap0007	OZ418341.1	22517260	22517359	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0008	OZ418341.1	37164745	37164844	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0009	OZ418341.1	43537943	43538042	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0010	OZ418341.1	60866738	60866837	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0011	OZ418341.1	65664068	65664167	closed_strict	r1	join	flanks_tie	JOINED	join
+dep1	gap0012	OZ418341.1	68211142	68211241	N				FILLED_REPEAT	fill_repeat
+dep1	gap0013	OZ418341.1	68424627	68424726	N				UNRESOLVED	tandem
+dep1	gap0014	OZ418341.1	68606327	68606426	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0015	OZ418341.1	100204811	100204910	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0016	OZ418341.1	110983282	110983381	N				UNRESOLVED	high_copy
+dep1	gap0017	OZ418341.1	117269729	117269828	N				UNRESOLVED	high_copy
+dep1	gap0018	OZ418341.1	123402116	123402215	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0019	OZ418341.1	129871707	129871806	N				UNRESOLVED	dropout
+dep1	gap0020	OZ418341.1	132458271	132458370	N				UNRESOLVED	other
+dep1	gap0021	OZ418341.1	134345240	134345339	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0022	OZ418341.1	140335340	140335439	closed_strict	r1	join	not_tested	JOINED	join
+dep1	gap0023	OZ418341.1	140408440	140408539	N				UNRESOLVED	high_copy
+dep1	gap0024	OZ418341.1	141831564	141831663	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0025	OZ418341.1	157556224	157556323	N				UNRESOLVED	high_copy
+dep1	gap0026	OZ418341.1	160707548	160707647	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0027	OZ418341.1	164482102	164482201	N				2ALLELES	het
+dep1	gap0028	OZ418341.1	164772340	164772439	N				UNRESOLVED	ga_tract
+dep1	gap0029	OZ418341.1	165966603	165966702	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0030	OZ418341.1	166234156	166234255	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0031	OZ418341.1	169385018	169385117	N				UNRESOLVED	high_copy
+dep1	gap0032	OZ418341.1	171006813	171006912	N				UNRESOLVED	tandem
+dep1	gap0033	OZ418341.1	172812313	172812412	N				UNRESOLVED	tandem
+dep1	gap0034	OZ418341.1	180568146	180568245	closed_genesearch	r1	genesearch	wrong_allele_structure	FILLED_1COPY	one_copy_fill
+dep1	gap0035	OZ418341.1	180680025	180680124	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0036	OZ418341.1	191698554	191698653	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0037	OZ418341.1	194250805	194250904	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0038	OZ418341.1	198727264	198727363	N				FILLED_REPEAT	fill_repeat
+dep1	gap0039	OZ418341.1	202911417	202911516	closed_strict	r1	join	flanks_tie	JOINED	join
+dep1	gap0040	OZ418341.1	212040120	212040219	N				UNRESOLVED	tandem
+dep1	gap0041	OZ418341.1	212495520	212495619	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0042	OZ418341.1	213540545	213540644	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0043	OZ418341.1	213897454	213897553	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0044	OZ418341.1	214713786	214713885	N				UNRESOLVED	tandem
+dep1	gap0045	OZ418341.1	214754005	214754104	N				UNRESOLVED	tandem
+dep1	gap0046	OZ418341.1	215598442	215598541	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0047	OZ418341.1	222426035	222426134	N				UNRESOLVED	tandem
+dep1	gap0048	OZ418341.1	234258047	234258146	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0049	OZ418341.1	249291592	249291691	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0050	OZ418341.1	250916833	250916932	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0051	OZ418341.1	283381579	283381678	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0052	OZ418341.1	284648713	284648812	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0053	OZ418341.1	301575890	301575989	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep1	gap0054	OZ418341.1	301962239	301962338	N				UNRESOLVED	other
+dep1	gap0055	OZ418341.1	304083515	304083614	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0056	OZ418341.1	305993791	305993890	N				FILLED_REPEAT	fill_repeat
+dep1	gap0057	OZ418341.1	306490157	306490256	N				UNRESOLVED	other
+dep1	gap0058	OZ418341.1	308348407	308348506	N				UNRESOLVED	dropout
+dep1	gap0059	OZ418341.1	314007408	314007507	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0060	OZ418341.1	327037543	327037642	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0061	OZ418341.1	328736005	328736104	closed_strict	r1	insert	flanks_tie	FILLED	fill_unclear
+dep1	gap0062	OZ418341.1	330502295	330502394	N				UNRESOLVED	tandem
+dep1	gap0063	OZ418342.1	362051	362150	N				UNRESOLVED	tandem
+dep1	gap0064	OZ418342.1	2276776	2276875	N				UNRESOLVED	tandem
+dep1	gap0065	OZ418342.1	4263574	4263673	N				FILLED_REPEAT	fill_repeat
+dep1	gap0066	OZ418342.1	4301741	4301840	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0067	OZ418342.1	15905415	15905514	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0068	OZ418342.1	28602092	28602191	closed_genesearch	lr	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0069	OZ418342.1	36245970	36246069	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0070	OZ418342.1	63685017	63685116	closed_strict	r1	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep1	gap0071	OZ418342.1	63926901	63927000	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0072	OZ418342.1	64249533	64249632	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0073	OZ418342.1	65754385	65754484	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0074	OZ418342.1	67328640	67328739	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep1	gap0075	OZ418342.1	67616290	67616389	N				UNRESOLVED	dropout
+dep1	gap0076	OZ418342.1	67976496	67976595	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0077	OZ418342.1	79991216	79991315	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0078	OZ418342.1	80187353	80187452	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0079	OZ418342.1	80688312	80688411	N				FILLED_REPEAT	fill_repeat
+dep1	gap0080	OZ418342.1	81263836	81263935	closed_strict	r1	insert	no_target_cross	UNRESOLVED	other
+dep1	gap0081	OZ418342.1	85879122	85879221	closed_genesearch	lr	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0082	OZ418342.1	85947786	85947885	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0083	OZ418342.1	86266240	86266339	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0084	OZ418342.1	87632859	87632958	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0085	OZ418342.1	98217162	98217261	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0086	OZ418342.1	101602596	101602695	N				UNRESOLVED	dropout
+dep1	gap0087	OZ418342.1	108832528	108832627	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0088	OZ418342.1	111447035	111447134	N				FILLED_REPEAT	fill_repeat
+dep1	gap0089	OZ418342.1	111829660	111829759	N				UNRESOLVED	high_copy
+dep1	gap0090	OZ418342.1	112489203	112489302	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0091	OZ418342.1	115023522	115023621	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0092	OZ418342.1	116388231	116388330	N				UNRESOLVED	dropout
+dep1	gap0093	OZ418342.1	119636618	119636717	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep1	gap0094	OZ418342.1	120924888	120924987	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0095	OZ418342.1	123830788	123830887	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0096	OZ418342.1	124607628	124607727	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0097	OZ418342.1	125521253	125521352	closed_strict	lr	join	flanks_tie	JOINED	join
+dep1	gap0098	OZ418342.1	126337160	126337259	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0099	OZ418342.1	127538195	127538294	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0100	OZ418342.1	127577801	127577900	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0101	OZ418342.1	127962509	127962608	N				FILLED_REPEAT	fill_repeat
+dep1	gap0102	OZ418342.1	129245912	129246011	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0103	OZ418342.1	130966473	130966572	N				UNRESOLVED	other
+dep1	gap0104	OZ418342.1	131534647	131534746	N				UNRESOLVED	tandem
+dep1	gap0105	OZ418342.1	131656282	131656381	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0106	OZ418342.1	131703896	131703995	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0107	OZ418342.1	132486681	132486780	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep1	gap0108	OZ418342.1	135443171	135443270	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0109	OZ418342.1	144396387	144396486	N				UNRESOLVED	tandem
+dep1	gap0110	OZ418342.1	153342143	153342242	closed_genesearch	lr	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0111	OZ418342.1	153644764	153644863	N				UNRESOLVED	other
+dep1	gap0112	OZ418342.1	160756672	160756771	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0113	OZ418342.1	161759043	161759142	N				UNRESOLVED	dropout
+dep1	gap0114	OZ418342.1	162119196	162119295	N				UNRESOLVED	ga_tract
+dep1	gap0115	OZ418342.1	173596192	173596291	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0116	OZ418342.1	175054388	175054487	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0117	OZ418342.1	176738702	176738801	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0118	OZ418342.1	178823428	178823527	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0119	OZ418342.1	178870833	178870932	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0120	OZ418342.1	181073673	181073772	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0121	OZ418342.1	183622645	183622744	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0122	OZ418342.1	186054249	186054348	N				FILLED_REPEAT	fill_repeat
+dep1	gap0123	OZ418342.1	186617871	186617970	N				FILLED_REPEAT	fill_repeat
+dep1	gap0124	OZ418342.1	186751935	186752034	closed_strict	r1	join	no_target_cross	JOINED	join
+dep1	gap0125	OZ418342.1	186857839	186857938	N				UNRESOLVED	dropout
+dep1	gap0126	OZ418342.1	186943657	186943756	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0127	OZ418342.1	187168532	187168631	N				UNRESOLVED	high_copy
+dep1	gap0128	OZ418342.1	187485790	187485889	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0129	OZ418342.1	189509596	189509695	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0130	OZ418342.1	195135386	195135485	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0131	OZ418342.1	203792694	203792793	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0132	OZ418342.1	219341331	219341430	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0133	OZ418342.1	235023110	235023209	N				UNRESOLVED	dropout
+dep1	gap0134	OZ418342.1	248165210	248165409	N				UNRESOLVED	high_copy
+dep1	gap0135	OZ418342.1	251305119	251305218	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0136	OZ418342.1	260805855	260805954	N				FILLED_REPEAT	fill_repeat
+dep1	gap0137	OZ418342.1	261026198	261026297	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0138	OZ418342.1	262159074	262159173	N				FILLED_REPEAT	fill_repeat
+dep1	gap0139	OZ418342.1	265619512	265619611	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0140	OZ418342.1	266655249	266655348	N				UNRESOLVED	dropout
+dep1	gap0141	OZ418342.1	267115375	267115474	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0142	OZ418342.1	268413575	268413674	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0143	OZ418342.1	270216337	270216436	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0144	OZ418342.1	270502076	270502175	N				UNRESOLVED	dropout
+dep1	gap0145	OZ418342.1	271373614	271373713	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0146	OZ418342.1	272315865	272315964	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0147	OZ418342.1	272687660	272687759	N				UNRESOLVED	tandem
+dep1	gap0148	OZ418342.1	272805236	272805335	N				UNRESOLVED	dropout
+dep1	gap0149	OZ418342.1	275712319	275712418	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0150	OZ418342.1	275772312	275772411	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0151	OZ418342.1	278736458	278736557	closed_genesearch	lr	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0152	OZ418342.1	279424933	279425032	N				UNRESOLVED	tandem
+dep1	gap0153	OZ418342.1	280157298	280157397	N				UNRESOLVED	tandem
+dep1	gap0154	OZ418342.1	281534580	281534679	N				UNRESOLVED	dropout
+dep1	gap0155	OZ418342.1	282147603	282147702	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep1	gap0156	OZ418342.1	283671542	283671641	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0157	OZ418342.1	284305784	284305883	N				UNRESOLVED	dropout
+dep1	gap0158	OZ418342.1	285984070	285984169	N				UNRESOLVED	tandem
+dep1	gap0159	OZ418342.1	287357259	287357358	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0160	OZ418342.1	287719762	287719861	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0161	OZ418342.1	288432272	288432371	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0162	OZ418342.1	289975942	289976041	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0163	OZ418342.1	292205142	292205241	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0164	OZ418342.1	298852006	298852105	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0165	OZ418342.1	299147347	299147446	N				UNRESOLVED	high_copy
+dep1	gap0166	OZ418342.1	312683025	312683124	N				UNRESOLVED	high_copy
+dep1	gap0167	OZ418342.1	315745968	315746067	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0168	OZ418342.1	316432243	316432342	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0169	OZ418342.1	316578084	316578183	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0170	OZ418342.1	318139279	318139378	N				FILLED_REPEAT	fill_repeat
+dep1	gap0171	OZ418342.1	318539883	318539982	N				UNRESOLVED	dropout
+dep1	gap0172	OZ418342.1	319747936	319748035	N				UNRESOLVED	dropout
+dep1	gap0173	OZ418342.1	322987004	322987103	closed_strict	r1	join	no_target_cross	FILLED	overlap
+dep1	gap0174	OZ418342.1	323657055	323657154	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0175	OZ418342.1	323785268	323785367	N				UNRESOLVED	high_copy
+dep1	gap0176	OZ418342.1	326294764	326294863	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0177	OZ418342.1	326619940	326620039	N				UNRESOLVED	dropout
+dep1	gap0178	OZ418342.1	327399351	327399450	N				UNRESOLVED	other
+dep1	gap0179	OZ418342.1	329365125	329365224	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0180	OZ418342.1	330049416	330049515	N				FILLED_REPEAT	fill_repeat
+dep1	gap0181	OZ418342.1	330112223	330112322	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0182	OZ418343.1	2494733	2494832	N				UNRESOLVED	tandem
+dep1	gap0183	OZ418343.1	3232160	3232259	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0184	OZ418343.1	11640256	11640355	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0185	OZ418343.1	12146157	12146256	N				UNRESOLVED	tandem
+dep1	gap0186	OZ418343.1	13680773	13680872	closed_strict	r1	insert	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0187	OZ418343.1	15781471	15781570	N				UNRESOLVED	tandem
+dep1	gap0188	OZ418343.1	16674963	16675062	N				UNRESOLVED	tandem
+dep1	gap0189	OZ418343.1	18569910	18570009	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0190	OZ418343.1	19061027	19061126	N				UNRESOLVED	other
+dep1	gap0191	OZ418343.1	26217779	26217878	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0192	OZ418343.1	33524095	33524194	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0193	OZ418343.1	38401968	38402067	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0194	OZ418343.1	38546757	38546856	N				UNRESOLVED	other
+dep1	gap0195	OZ418343.1	77107969	77108068	N				UNRESOLVED	tandem
+dep1	gap0196	OZ418343.1	81676323	81676422	N				UNRESOLVED	dropout
+dep1	gap0197	OZ418343.1	82229424	82229523	N				FILLED_REPEAT	fill_repeat
+dep1	gap0198	OZ418343.1	82342996	82343095	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0199	OZ418343.1	83799018	83799117	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep1	gap0200	OZ418343.1	95764940	95765039	N				UNRESOLVED	tandem
+dep1	gap0201	OZ418343.1	97142329	97142428	N				UNRESOLVED	tandem
+dep1	gap0202	OZ418343.1	99249429	99249528	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep1	gap0203	OZ418343.1	101410713	101410812	N				UNRESOLVED	dropout
+dep1	gap0204	OZ418343.1	103110453	103110552	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0205	OZ418343.1	103414092	103414191	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0206	OZ418343.1	113825902	113826001	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep1	gap0207	OZ418343.1	116782192	116782291	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0208	OZ418343.1	118549321	118549420	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0209	OZ418343.1	124527559	124527658	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0210	OZ418343.1	127389023	127389122	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0211	OZ418343.1	128033294	128033393	closed_strict	r1	join	no_target_cross	JOINED	join
+dep1	gap0212	OZ418343.1	129938836	129938935	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0213	OZ418343.1	133917127	133917226	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0214	OZ418343.1	134426871	134426970	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0215	OZ418343.1	134771486	134771585	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep1	gap0216	OZ418343.1	138775448	138775547	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0217	OZ418343.1	138836505	138836604	N				UNRESOLVED	high_copy
+dep1	gap0218	OZ418343.1	139033986	139034085	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0219	OZ418343.1	143309351	143309450	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0220	OZ418343.1	144329035	144329134	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0221	OZ418343.1	145772378	145772477	N				UNRESOLVED	ga_tract
+dep1	gap0222	OZ418343.1	150311202	150311301	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0223	OZ418343.1	150591031	150591130	N				UNRESOLVED	tandem
+dep1	gap0224	OZ418343.1	153488132	153488231	N				UNRESOLVED	high_copy
+dep1	gap0225	OZ418343.1	153584687	153584786	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0226	OZ418343.1	154104591	154104690	N				UNRESOLVED	dropout
+dep1	gap0227	OZ418343.1	178794603	178794702	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0228	OZ418343.1	180445266	180445365	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0229	OZ418343.1	190484485	190484584	N				UNRESOLVED	other
+dep1	gap0230	OZ418343.1	221932659	221932758	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0231	OZ418343.1	225013130	225013229	N				UNRESOLVED	dropout
+dep1	gap0232	OZ418343.1	236466171	236466270	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0233	OZ418343.1	252093129	252093228	N				UNRESOLVED	dropout
+dep1	gap0234	OZ418343.1	265406663	265406762	closed_genesearch	r1	genesearch	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0235	OZ418343.1	271698676	271698775	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0236	OZ418343.1	277382075	277382174	N				UNRESOLVED	tandem
+dep1	gap0237	OZ418344.1	1424540	1424639	N				FILLED_REPEAT	fill_repeat
+dep1	gap0238	OZ418344.1	1666092	1666191	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0239	OZ418344.1	1814042	1814141	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0240	OZ418344.1	3624662	3624761	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0241	OZ418344.1	5440248	5440347	N				UNRESOLVED	dropout
+dep1	gap0242	OZ418344.1	7470295	7470394	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0243	OZ418344.1	7617229	7617328	N				UNRESOLVED	tandem
+dep1	gap0244	OZ418344.1	8003528	8003627	N				UNRESOLVED	high_copy
+dep1	gap0245	OZ418344.1	8124301	8124400	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0246	OZ418344.1	8482747	8482846	N				UNRESOLVED	dropout
+dep1	gap0247	OZ418344.1	8538327	8538426	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0248	OZ418344.1	17213380	17213479	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0249	OZ418344.1	17574405	17574504	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0250	OZ418344.1	17641595	17641694	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0251	OZ418344.1	17789467	17789566	N				UNRESOLVED	tandem
+dep1	gap0252	OZ418344.1	18305526	18305625	N				UNRESOLVED	high_copy
+dep1	gap0253	OZ418344.1	21063735	21063834	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0254	OZ418344.1	22394548	22394647	N				UNRESOLVED	high_copy
+dep1	gap0255	OZ418344.1	22553470	22553569	N				UNRESOLVED	high_copy
+dep1	gap0256	OZ418344.1	23168723	23168822	N				UNRESOLVED	high_copy
+dep1	gap0257	OZ418344.1	23273129	23273228	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0258	OZ418344.1	23371951	23372050	N				UNRESOLVED	other
+dep1	gap0259	OZ418344.1	23670013	23670112	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0260	OZ418344.1	25010765	25010864	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0261	OZ418344.1	27925987	27926086	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0262	OZ418344.1	27998681	27998780	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0263	OZ418344.1	28060678	28060777	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0264	OZ418344.1	28430340	28430439	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0265	OZ418344.1	28650531	28650630	N				UNRESOLVED	high_copy
+dep1	gap0266	OZ418344.1	28728216	28728315	N				UNRESOLVED	dropout
+dep1	gap0267	OZ418344.1	29089810	29089909	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0268	OZ418344.1	29149919	29150018	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0269	OZ418344.1	29263249	29263348	N				UNRESOLVED	dropout
+dep1	gap0270	OZ418344.1	29458216	29458315	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0271	OZ418344.1	29757257	29757356	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	high_copy
+dep1	gap0272	OZ418344.1	29813641	29813740	closed_genesearch	lr	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0273	OZ418344.1	31102138	31102237	N				UNRESOLVED	high_copy
+dep1	gap0274	OZ418344.1	31173235	31173334	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0275	OZ418344.1	32604718	32604817	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0276	OZ418344.1	39858051	39858150	closed_strict	r1	insert	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0277	OZ418344.1	40519791	40519890	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0278	OZ418344.1	41030155	41030254	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0279	OZ418344.1	41343786	41343885	N				UNRESOLVED	tandem
+dep1	gap0280	OZ418344.1	41431554	41431653	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0281	OZ418344.1	45107993	45108092	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0282	OZ418344.1	47996104	47996203	closed_strict	r1	join	not_tested	JOINED	join
+dep1	gap0283	OZ418344.1	49822828	49822927	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0284	OZ418344.1	51795097	51795196	N				UNRESOLVED	ga_tract
+dep1	gap0285	OZ418344.1	52088679	52088778	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0286	OZ418344.1	52940256	52940355	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0287	OZ418344.1	52973892	52973991	N				FILLED_REPEAT	fill_repeat
+dep1	gap0288	OZ418344.1	53090801	53090900	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0289	OZ418344.1	53454038	53454137	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0290	OZ418344.1	55831924	55832023	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0291	OZ418344.1	56529030	56529129	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0292	OZ418344.1	56645393	56645492	N				FILLED_REPEAT	fill_repeat
+dep1	gap0293	OZ418344.1	58618882	58618981	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0294	OZ418344.1	76072608	76072707	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0295	OZ418344.1	87762333	87762432	N				UNRESOLVED	dropout
+dep1	gap0296	OZ418344.1	94740433	94740532	N				2ALLELES	het
+dep1	gap0297	OZ418344.1	103777451	103777550	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0298	OZ418344.1	104171905	104172004	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0299	OZ418344.1	104319503	104319602	N				UNRESOLVED	dropout
+dep1	gap0300	OZ418344.1	105256390	105256489	closed_strict	r1	insert	no_target_cross	FILLED	fill_unclear
+dep1	gap0301	OZ418344.1	111422024	111422123	N				UNRESOLVED	ga_tract
+dep1	gap0302	OZ418344.1	124144424	124144523	N				FILLED_REPEAT	fill_repeat
+dep1	gap0303	OZ418344.1	125231588	125231687	N				FILLED_REPEAT	fill_repeat
+dep1	gap0304	OZ418344.1	126689323	126689422	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0305	OZ418344.1	127285696	127285795	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0306	OZ418344.1	127817439	127817538	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0307	OZ418344.1	128405924	128406023	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0308	OZ418344.1	128541214	128541313	N				FILLED_REPEAT	fill_repeat
+dep1	gap0309	OZ418344.1	142812360	142812459	N				UNRESOLVED	other
+dep1	gap0310	OZ418344.1	143117840	143117939	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0311	OZ418344.1	143492844	143492943	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0312	OZ418344.1	145145731	145145830	N				UNRESOLVED	tandem
+dep1	gap0313	OZ418344.1	147674615	147674714	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0314	OZ418344.1	148347595	148347694	closed_genesearch	r1	genesearch	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0315	OZ418344.1	148545547	148545646	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep1	gap0316	OZ418344.1	157095110	157095209	N				FILLED_REPEAT	fill_repeat
+dep1	gap0317	OZ418344.1	157860257	157860356	N				UNRESOLVED	high_copy
+dep1	gap0318	OZ418344.1	161342270	161342369	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0319	OZ418344.1	162731412	162731511	N				UNRESOLVED	high_copy
+dep1	gap0320	OZ418344.1	162785900	162785999	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0321	OZ418344.1	162904742	162904841	closed_strict	r1	join	not_tested	JOINED	join
+dep1	gap0322	OZ418344.1	180048842	180048941	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0323	OZ418344.1	209151248	209151347	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0324	OZ418344.1	214165172	214165271	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0325	OZ418344.1	217575342	217575441	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0326	OZ418344.1	217719798	217719897	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0327	OZ418344.1	221309602	221309701	N				UNRESOLVED	other
+dep1	gap0328	OZ418344.1	222056711	222056810	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0329	OZ418344.1	223486872	223486971	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep1	gap0330	OZ418344.1	229019843	229019942	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0331	OZ418344.1	235372971	235373070	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0332	OZ418344.1	235407834	235407933	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0333	OZ418344.1	238350199	238350298	N				UNRESOLVED	dropout
+dep1	gap0334	OZ418344.1	238855522	238855621	N				UNRESOLVED	tandem
+dep1	gap0335	OZ418344.1	247694533	247694632	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0336	OZ418344.1	249681591	249681690	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep1	gap0337	OZ418344.1	255009886	255009985	N				UNRESOLVED	tandem
+dep1	gap0338	OZ418344.1	255670203	255670302	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0339	OZ418344.1	257314066	257314165	N				UNRESOLVED	tandem
+dep1	gap0340	OZ418344.1	258213042	258213141	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	dropout
+dep1	gap0341	OZ418345.1	17541401	17541500	N				UNRESOLVED	dropout
+dep1	gap0342	OZ418345.1	22561236	22561335	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0343	OZ418345.1	38112599	38112698	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0344	OZ418345.1	44133315	44133414	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	ga_tract
+dep1	gap0345	OZ418345.1	47472002	47472101	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0346	OZ418345.1	73825099	73825198	N				UNRESOLVED	high_copy
+dep1	gap0347	OZ418345.1	82672670	82672769	N				UNRESOLVED	tandem
+dep1	gap0348	OZ418345.1	91398757	91398856	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0349	OZ418345.1	91454857	91454956	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0350	OZ418345.1	93763419	93763518	N				UNRESOLVED	high_copy
+dep1	gap0351	OZ418345.1	98207844	98207943	N				UNRESOLVED	ga_tract
+dep1	gap0352	OZ418345.1	98703027	98703126	N				UNRESOLVED	dropout
+dep1	gap0353	OZ418345.1	115591657	115591756	closed_genesearch	r1	genesearch	own_or_identical	2ALLELES	het
+dep1	gap0354	OZ418345.1	119686304	119686403	N				FILLED_REPEAT	fill_repeat
+dep1	gap0355	OZ418345.1	125859289	125859388	N				UNRESOLVED	high_copy
+dep1	gap0356	OZ418345.1	131175554	131175653	N				UNRESOLVED	dropout
+dep1	gap0357	OZ418345.1	133367352	133367451	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0358	OZ418345.1	137554723	137554822	closed_genesearch	lr	insert	wrong_allele	2ALLELES	het
+dep1	gap0359	OZ418345.1	151210203	151210302	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0360	OZ418345.1	152084389	152084488	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0361	OZ418345.1	162578750	162578849	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0362	OZ418345.1	166301414	166301513	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0363	OZ418345.1	172269227	172269326	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0364	OZ418345.1	181704739	181704838	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0365	OZ418345.1	190064988	190065087	N				UNRESOLVED	other
+dep1	gap0366	OZ418345.1	211352171	211352270	N				UNRESOLVED	other
+dep1	gap0367	OZ418345.1	218840541	218840640	N				UNRESOLVED	other
+dep1	gap0368	OZ418345.1	224670087	224670186	N				UNRESOLVED	dropout
+dep1	gap0369	OZ418345.1	225126813	225126912	N				UNRESOLVED	other
+dep1	gap0370	OZ418345.1	233496050	233496149	N				UNRESOLVED	dropout
+dep1	gap0371	OZ418345.1	235748442	235748541	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0372	OZ418345.1	236142078	236142177	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0373	OZ418345.1	237402723	237402822	N				UNRESOLVED	tandem
+dep1	gap0374	OZ418346.1	24556927	24557026	N				UNRESOLVED	ga_tract
+dep1	gap0375	OZ418346.1	31095222	31095321	N				UNRESOLVED	other
+dep1	gap0376	OZ418346.1	35533120	35533219	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0377	OZ418346.1	38041567	38041666	N				UNRESOLVED	dropout
+dep1	gap0378	OZ418346.1	38567262	38567361	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	tandem
+dep1	gap0379	OZ418346.1	40490912	40491011	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0380	OZ418346.1	43990456	43990555	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0381	OZ418346.1	48070612	48070711	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0382	OZ418346.1	70574303	70574402	N				UNRESOLVED	other
+dep1	gap0383	OZ418346.1	70873820	70873919	N				FILLED_REPEAT	fill_repeat
+dep1	gap0384	OZ418346.1	71381106	71381205	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0385	OZ418346.1	73351712	73351811	N				UNRESOLVED	ga_tract
+dep1	gap0386	OZ418346.1	73947720	73947819	N				UNRESOLVED	other
+dep1	gap0387	OZ418346.1	81787491	81787590	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0388	OZ418346.1	103249591	103249690	N				FILLED_REPEAT	fill_repeat
+dep1	gap0389	OZ418346.1	131520864	131520963	N				UNRESOLVED	dropout
+dep1	gap0390	OZ418346.1	131671007	131671106	N				UNRESOLVED	tandem
+dep1	gap0391	OZ418346.1	141118929	141119028	N				FILLED_REPEAT	fill_repeat
+dep1	gap0392	OZ418346.1	143935253	143935352	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep1	gap0393	OZ418346.1	148165914	148166013	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0394	OZ418346.1	148489304	148489403	N				UNRESOLVED	dropout
+dep1	gap0395	OZ418346.1	148662855	148662954	N				UNRESOLVED	tandem
+dep1	gap0396	OZ418346.1	154138981	154139080	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0397	OZ418346.1	160419532	160419631	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	ga_tract
+dep1	gap0398	OZ418346.1	168437619	168437718	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0399	OZ418346.1	170421544	170421643	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep1	gap0400	OZ418346.1	177330940	177331039	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0401	OZ418346.1	186247957	186248056	closed_strict	lr	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0402	OZ418346.1	186993478	186993577	N				UNRESOLVED	high_copy
+dep1	gap0403	OZ418346.1	189887900	189887999	closed_strict	lr	insert	flanks_tie	FILLED	overlap
+dep1	gap0404	OZ418346.1	190166816	190166915	N				UNRESOLVED	tandem
+dep1	gap0405	OZ418346.1	190866037	190866136	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0406	OZ418346.1	191222386	191222485	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0407	OZ418346.1	196192487	196192586	N				FILLED_REPEAT	fill_repeat
+dep1	gap0408	OZ418346.1	196273549	196273648	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0409	OZ418346.1	196787329	196787428	closed_genesearch	r1	genesearch	own_or_identical	UNRESOLVED	tandem
+dep1	gap0410	OZ418346.1	196826432	196826531	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0411	OZ418346.1	197504787	197504886	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0412	OZ418346.1	197827403	197827502	N				UNRESOLVED	dropout
+dep1	gap0413	OZ418346.1	198228618	198228717	N				UNRESOLVED	other
+dep1	gap0414	OZ418346.1	198400842	198400941	N				FILLED_REPEAT	fill_repeat
+dep1	gap0415	OZ418346.1	198683138	198683237	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0416	OZ418346.1	200400890	200400989	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0417	OZ418346.1	204670976	204671075	N				UNRESOLVED	high_copy
+dep1	gap0418	OZ418346.1	207478415	207478514	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0419	OZ418346.1	207893466	207893565	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0420	OZ418347.1	835936	836035	closed_strict	lr	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep1	gap0421	OZ418347.1	2056744	2056843	N				UNRESOLVED	tandem
+dep1	gap0422	OZ418347.1	6934010	6934109	N				UNRESOLVED	high_copy
+dep1	gap0423	OZ418347.1	9013806	9013905	N				UNRESOLVED	high_copy
+dep1	gap0424	OZ418347.1	9278404	9278603	N				UNRESOLVED	high_copy
+dep1	gap0425	OZ418347.1	16680624	16680723	N				UNRESOLVED	high_copy
+dep1	gap0426	OZ418347.1	17536540	17536639	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0427	OZ418347.1	48715150	48715249	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0428	OZ418347.1	52529232	52529331	closed_strict	r1	join	no_target_cross	JOINED	join
+dep1	gap0429	OZ418347.1	57425569	57425668	N				UNRESOLVED	dropout
+dep1	gap0430	OZ418347.1	58511842	58511941	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0431	OZ418347.1	67265155	67265254	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0432	OZ418347.1	68498832	68498931	N				UNRESOLVED	dropout
+dep1	gap0433	OZ418347.1	74882486	74882585	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0434	OZ418347.1	79307093	79307192	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0435	OZ418347.1	83260169	83260268	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0436	OZ418347.1	85945272	85945371	N				UNRESOLVED	tandem
+dep1	gap0437	OZ418347.1	86026258	86026357	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0438	OZ418347.1	88585578	88585677	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0439	OZ418347.1	90115895	90115994	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0440	OZ418347.1	95111426	95111525	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	other
+dep1	gap0441	OZ418347.1	96007475	96007574	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0442	OZ418347.1	96644323	96644422	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0443	OZ418347.1	104199120	104199219	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep1	gap0444	OZ418347.1	104571804	104571903	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0445	OZ418347.1	123667083	123667182	N				UNRESOLVED	tandem
+dep1	gap0446	OZ418347.1	125481545	125481644	closed_genesearch	r1	genesearch	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0447	OZ418347.1	139496905	139497004	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0448	OZ418347.1	140116352	140116451	N				UNRESOLVED	dropout
+dep1	gap0449	OZ418347.1	149173136	149173235	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0450	OZ418347.1	150812347	150812446	N				FILLED_REPEAT	fill_repeat
+dep1	gap0451	OZ418347.1	151178236	151178335	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0452	OZ418347.1	153664407	153664506	N				UNRESOLVED	tandem
+dep1	gap0453	OZ418347.1	165201669	165201768	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0454	OZ418347.1	165517850	165517949	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0455	OZ418347.1	165630973	165631072	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0456	OZ418347.1	166943922	166944021	N				UNRESOLVED	high_copy
+dep1	gap0457	OZ418347.1	167352916	167353015	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0458	OZ418347.1	167444404	167444503	closed_strict	r1	join	no_target_cross	JOINED	join
+dep1	gap0459	OZ418347.1	168794847	168794946	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0460	OZ418347.1	182573492	182573591	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0461	OZ418348.1	580309	580408	N				UNRESOLVED	other
+dep1	gap0462	OZ418348.1	622963	623062	N				FILLED_REPEAT	fill_repeat
+dep1	gap0463	OZ418348.1	733481	733580	N				UNRESOLVED	other
+dep1	gap0464	OZ418348.1	835905	836004	N				UNRESOLVED	dropout
+dep1	gap0465	OZ418348.1	1052171	1052270	N				UNRESOLVED	tandem
+dep1	gap0466	OZ418348.1	1509930	1510029	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0467	OZ418348.1	1817249	1817348	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0468	OZ418348.1	2163532	2163631	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0469	OZ418348.1	2468264	2468363	N				UNRESOLVED	dropout
+dep1	gap0470	OZ418348.1	2547899	2547998	N				UNRESOLVED	tandem
+dep1	gap0471	OZ418348.1	2664311	2664410	N				UNRESOLVED	dropout
+dep1	gap0472	OZ418348.1	3492118	3492217	N				UNRESOLVED	tandem
+dep1	gap0473	OZ418348.1	4139358	4139457	N				UNRESOLVED	other
+dep1	gap0474	OZ418348.1	4211892	4211991	N				UNRESOLVED	dropout
+dep1	gap0475	OZ418348.1	4312594	4312693	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0476	OZ418348.1	4490604	4490703	N				UNRESOLVED	tandem
+dep1	gap0477	OZ418348.1	4584193	4584292	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0478	OZ418348.1	4671720	4671819	closed_strict	lr	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0479	OZ418348.1	4843423	4843522	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0480	OZ418348.1	5081826	5081925	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0481	OZ418348.1	5213723	5213822	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0482	OZ418348.1	5386988	5387087	N				UNRESOLVED	dropout
+dep1	gap0483	OZ418348.1	10665451	10665550	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0484	OZ418348.1	11935410	11935509	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0485	OZ418348.1	12139450	12139549	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0486	OZ418348.1	12671658	12671757	N				UNRESOLVED	tandem
+dep1	gap0487	OZ418348.1	12728342	12728441	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0488	OZ418348.1	13718938	13719037	N				UNRESOLVED	dropout
+dep1	gap0489	OZ418348.1	14203353	14203452	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0490	OZ418348.1	29221322	29221421	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0491	OZ418348.1	29268329	29268428	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0492	OZ418348.1	30763793	30763892	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0493	OZ418348.1	31106259	31106358	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0494	OZ418348.1	32408489	32408588	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0495	OZ418348.1	32577256	32577355	N				UNRESOLVED	tandem
+dep1	gap0496	OZ418348.1	33011157	33011256	N				UNRESOLVED	high_copy
+dep1	gap0497	OZ418348.1	47402599	47402698	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0498	OZ418348.1	48212009	48212108	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0499	OZ418348.1	49080151	49080250	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0500	OZ418348.1	49174345	49174444	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0501	OZ418348.1	56406570	56406669	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0502	OZ418348.1	57220937	57221036	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0503	OZ418348.1	64917342	64917441	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0504	OZ418348.1	66672185	66672284	N				UNRESOLVED	dropout
+dep1	gap0505	OZ418348.1	82557081	82557180	N				UNRESOLVED	other
+dep1	gap0506	OZ418348.1	86457278	86457377	N				UNRESOLVED	other
+dep1	gap0507	OZ418348.1	100562306	100562405	N				UNRESOLVED	other
+dep1	gap0508	OZ418348.1	103016482	103016581	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0509	OZ418348.1	104905802	104905901	N				UNRESOLVED	other
+dep1	gap0510	OZ418348.1	111332763	111332862	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0511	OZ418348.1	111961797	111961896	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0512	OZ418348.1	112062392	112062491	N				UNRESOLVED	high_copy
+dep1	gap0513	OZ418348.1	112360335	112360434	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0514	OZ418348.1	112454207	112454306	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0515	OZ418348.1	113055743	113055842	N				UNRESOLVED	tandem
+dep1	gap0516	OZ418348.1	113758343	113758442	N				UNRESOLVED	tandem
+dep1	gap0517	OZ418348.1	114799933	114800032	N				2ALLELES	het
+dep1	gap0518	OZ418348.1	125311033	125311132	closed_genesearch	r2	genesearch	not_tested	FILLED_1COPY	one_copy_fill
+dep1	gap0519	OZ418348.1	142947119	142947218	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0520	OZ418348.1	144497256	144497355	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0521	OZ418348.1	144869541	144869640	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0522	OZ418348.1	148783930	148784029	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0523	OZ418348.1	153165579	153165678	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0524	OZ418348.1	154229699	154229798	closed_strict	r1	insert	wrong_allele	FILLED	fill_unclear
+dep1	gap0525	OZ418348.1	156539779	156539878	N				UNRESOLVED	high_copy
+dep1	gap0526	OZ418348.1	158466712	158466811	N				2ALLELES	het
+dep1	gap0527	OZ418348.1	158592826	158592925	closed_genesearch	r1	genesearch	undecided	UNRESOLVED	dropout
+dep1	gap0528	OZ418348.1	160662682	160662781	N				UNRESOLVED	high_copy
+dep1	gap0529	OZ418348.1	162763977	162764076	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0530	OZ418349.1	496411	496510	N				UNRESOLVED	high_copy
+dep1	gap0531	OZ418349.1	1732386	1732485	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0532	OZ418349.1	3884540	3884639	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0533	OZ418349.1	30835565	30835664	closed_strict	r1	join	not_tested	JOINED	join
+dep1	gap0534	OZ418349.1	33855665	33855764	N				UNRESOLVED	tandem
+dep1	gap0535	OZ418349.1	34019875	34019974	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0536	OZ418349.1	41549072	41549171	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0537	OZ418349.1	44013724	44013823	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0538	OZ418349.1	47678644	47678743	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0539	OZ418349.1	51237833	51237932	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0540	OZ418349.1	58899582	58899681	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0541	OZ418349.1	68805381	68805480	N				UNRESOLVED	dropout
+dep1	gap0542	OZ418349.1	68910295	68910394	N				FILLED_REPEAT	fill_repeat
+dep1	gap0543	OZ418349.1	82291822	82291921	N				UNRESOLVED	high_copy
+dep1	gap0544	OZ418349.1	84752061	84752160	N				FILLED_REPEAT	fill_repeat
+dep1	gap0545	OZ418349.1	84899353	84899452	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0546	OZ418349.1	85062871	85062970	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0547	OZ418349.1	85149113	85149212	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0548	OZ418349.1	85171505	85171604	N				UNRESOLVED	other
+dep1	gap0549	OZ418349.1	86886769	86886868	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep1	gap0550	OZ418349.1	87709908	87710007	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0551	OZ418349.1	87982971	87983070	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0552	OZ418349.1	88086367	88086466	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0553	OZ418349.1	88847863	88847962	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0554	OZ418349.1	91382554	91382653	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0555	OZ418349.1	91509104	91509203	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0556	OZ418349.1	92901612	92901711	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0557	OZ418349.1	100456689	100456788	N				UNRESOLVED	tandem
+dep1	gap0558	OZ418349.1	105306583	105306682	N				FILLED_REPEAT	fill_repeat
+dep1	gap0559	OZ418349.1	107257098	107257197	N				UNRESOLVED	other
+dep1	gap0560	OZ418349.1	123230677	123230776	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0561	OZ418349.1	135605014	135605113	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0562	OZ418349.1	137613007	137613106	N				UNRESOLVED	other
+dep1	gap0563	OZ418349.1	143209071	143209170	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0564	OZ418349.1	143819943	143820042	N				UNRESOLVED	dropout
+dep1	gap0565	OZ418349.1	144779772	144779871	closed_strict	r1	join	own_or_identical	UNRESOLVED	other
+dep1	gap0566	OZ418349.1	145205022	145205121	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0567	OZ418349.1	146777656	146777755	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0568	OZ418349.1	148688691	148688790	N				UNRESOLVED	dropout
+dep1	gap0569	OZ418349.1	149097930	149098029	N				UNRESOLVED	high_copy
+dep1	gap0570	OZ418349.1	149536541	149536640	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0571	OZ418349.1	150062404	150062503	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0572	OZ418349.1	150722664	150722763	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0573	OZ418349.1	150784886	150784985	N				UNRESOLVED	tandem
+dep1	gap0574	OZ418349.1	155837874	155837973	N				UNRESOLVED	tandem
+dep1	gap0575	OZ418349.1	156482239	156482338	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0576	OZ418349.1	156699429	156699528	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0577	OZ418349.1	157379087	157379186	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0578	OZ418350.1	724001	724100	closed_strict	r1	join	not_tested	JOINED	join
+dep1	gap0579	OZ418350.1	761650	761749	N				UNRESOLVED	tandem
+dep1	gap0580	OZ418350.1	3545494	3545593	N				UNRESOLVED	dropout
+dep1	gap0581	OZ418350.1	3916298	3916397	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0582	OZ418350.1	4560332	4560431	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0583	OZ418350.1	4986187	4986286	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0584	OZ418350.1	10141475	10141574	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0585	OZ418350.1	14958311	14958410	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0586	OZ418350.1	26509562	26509661	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0587	OZ418350.1	27634736	27634835	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0588	OZ418350.1	34444130	34444229	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0589	OZ418350.1	36132628	36132727	N				UNRESOLVED	dropout
+dep1	gap0590	OZ418350.1	40193365	40193464	N				UNRESOLVED	high_copy
+dep1	gap0591	OZ418350.1	42573214	42573313	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0592	OZ418350.1	59792780	59792879	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0593	OZ418350.1	77014268	77014367	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0594	OZ418350.1	93089224	93089323	N				UNRESOLVED	tandem
+dep1	gap0595	OZ418350.1	100773586	100773685	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep1	gap0596	OZ418350.1	100844273	100844372	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0597	OZ418350.1	114991499	114991598	N				UNRESOLVED	dropout
+dep1	gap0598	OZ418350.1	117075707	117075806	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0599	OZ418350.1	117136280	117136379	N				FILLED_REPEAT	fill_repeat
+dep1	gap0600	OZ418350.1	119247479	119247578	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0601	OZ418350.1	119625753	119625852	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0602	OZ418350.1	121520217	121520316	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0603	OZ418350.1	133074661	133074760	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0604	OZ418351.1	702311	702410	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0605	OZ418351.1	1025598	1025697	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0606	OZ418351.1	4227353	4227452	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0607	OZ418351.1	5433304	5433403	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0608	OZ418351.1	7046717	7046816	N				UNRESOLVED	ga_tract
+dep1	gap0609	OZ418351.1	7894584	7894683	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep1	gap0610	OZ418351.1	10853662	10853761	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0611	OZ418351.1	11047642	11047741	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0612	OZ418351.1	11478028	11478127	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0613	OZ418351.1	11751895	11751994	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0614	OZ418351.1	13175112	13175211	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0615	OZ418351.1	13448497	13448596	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep1	gap0616	OZ418351.1	13476346	13476445	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep1	gap0617	OZ418351.1	14348579	14348678	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0618	OZ418351.1	16059376	16059475	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0619	OZ418351.1	16724212	16724311	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep1	gap0620	OZ418351.1	19158895	19158994	N				UNRESOLVED	dropout
+dep1	gap0621	OZ418351.1	21821919	21822018	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0622	OZ418351.1	26753843	26753942	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0623	OZ418351.1	37655084	37655183	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0624	OZ418351.1	39785907	39786006	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0625	OZ418351.1	42658734	42658833	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep1	gap0626	OZ418351.1	44629319	44629418	closed_strict	r1	insert	wrong_allele	FILLED	fill_unclear
+dep1	gap0627	OZ418351.1	56606136	56606235	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep1	gap0628	OZ418351.1	60166296	60166395	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0629	OZ418351.1	63543334	63543433	N				FILLED_REPEAT	fill_repeat
+dep1	gap0630	OZ418351.1	64096177	64096276	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0631	OZ418351.1	64845318	64845417	N				FILLED_REPEAT	fill_repeat
+dep1	gap0632	OZ418351.1	65286802	65286901	closed_genesearch	r1	genesearch	own_or_identical	UNRESOLVED	other
+dep1	gap0633	OZ418351.1	65942236	65942335	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0634	OZ418351.1	66686860	66686959	N				UNRESOLVED	tandem
+dep1	gap0635	OZ418351.1	74133960	74134059	N				UNRESOLVED	dropout
+dep1	gap0636	OZ418351.1	76278369	76278468	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0637	OZ418351.1	77272189	77272288	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0638	OZ418351.1	77409017	77409116	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0639	OZ418351.1	77924348	77924447	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0640	OZ418351.1	79608901	79609000	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0641	OZ418351.1	97649450	97649549	N				UNRESOLVED	tandem
+dep1	gap0642	OZ418351.1	110828644	110828743	N				FILLED_REPEAT	fill_repeat
+dep1	gap0643	OZ418351.1	112586537	112586636	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0644	OZ418351.1	119963434	119963533	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0645	OZ418351.1	124151246	124151345	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0646	OZ418351.1	124692763	124692862	N				UNRESOLVED	tandem
+dep1	gap0647	OZ418351.1	127715295	127715394	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep1	gap0648	OZ418351.1	128241996	128242095	N				UNRESOLVED	dropout
+dep1	gap0649	OZ418351.1	129053793	129053892	closed_strict	r1	join	wrong_allele	JOINED	join
+dep1	gap0650	OZ418351.1	132611175	132611274	N				FILLED_REPEAT	fill_repeat
+dep1	gap0651	OZ418351.1	134431417	134431516	N				UNRESOLVED	high_copy
+dep1	gap0652	OZ418351.1	136033523	136033622	N				UNRESOLVED	other
+dep1	gap0653	OZ418351.1	136278881	136278980	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0654	OZ418351.1	136882391	136882490	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0655	OZ418351.1	138050551	138050650	N				UNRESOLVED	high_copy
+dep1	gap0656	OZ418351.1	138728933	138729032	N				UNRESOLVED	tandem
+dep1	gap0657	OZ418351.1	139924496	139924595	N				UNRESOLVED	tandem
+dep1	gap0658	OZ418352.1	2012878	2012977	N				UNRESOLVED	tandem
+dep1	gap0659	OZ418352.1	2222568	2222667	N				UNRESOLVED	dropout
+dep1	gap0660	OZ418352.1	7357102	7357201	N				UNRESOLVED	other
+dep1	gap0661	OZ418352.1	22312084	22312183	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0662	OZ418352.1	22422184	22422283	closed_strict	r1	join	undecided	JOINED	join
+dep1	gap0663	OZ418352.1	38148913	38149012	closed_strict	r1	join	own_or_identical	JOINED	join
+dep1	gap0664	OZ418352.1	39338895	39338994	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0665	OZ418352.1	45583045	45583144	N				UNRESOLVED	high_copy
+dep1	gap0666	OZ418352.1	47276619	47276718	closed_genesearch	lr	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0667	OZ418352.1	48513074	48513173	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0668	OZ418352.1	50136495	50136594	N				UNRESOLVED	tandem
+dep1	gap0669	OZ418352.1	50323638	50323737	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0670	OZ418352.1	51529954	51530053	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep1	gap0671	OZ418352.1	52363060	52363159	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0672	OZ418352.1	52828770	52828869	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0673	OZ418352.1	55741465	55741564	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0674	OZ418352.1	55814672	55814771	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep1	gap0675	OZ418352.1	56370655	56370754	N				UNRESOLVED	high_copy
+dep1	gap0676	OZ418352.1	63800065	63800164	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep1	gap0677	OZ418352.1	66546065	66546164	N				UNRESOLVED	tandem
+dep1	gap0678	OZ418352.1	76944018	76944117	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep1	gap0679	OZ418352.1	88575152	88575251	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	dropout
+dep1	gap0680	OZ418352.1	93840881	93840980	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep1	gap0681	OZ418352.1	104021884	104021983	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0682	OZ418352.1	104589309	104589408	N				UNRESOLVED	dropout
+dep1	gap0683	OZ418352.1	104721915	104722014	closed_strict	r1	insert	own_or_identical	FILLED	fill_unclear
+dep1	gap0684	OZ418352.1	105574973	105575072	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep1	gap0685	OZ418352.1	114149935	114150034	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep1	gap0686	OZ418353.1	4607998	4608097	N				UNRESOLVED	dropout
+dep1	gap0687	OZ418353.1	15020392	15020491	N				UNRESOLVED	dropout
+dep1	gap0688	OZ418353.1	17051603	17051702	N				UNRESOLVED	high_copy
+dep1	gap0689	OZ418353.1	18730996	18731095	N				UNRESOLVED	tandem
+dep1	gap0690	OZ418353.1	18918652	18918751	N				UNRESOLVED	other
+dep1	gap0691	OZ418353.1	19151664	19151763	N				UNRESOLVED	high_copy
+dep1	gap0692	OZ418353.1	20651062	20651161	N				UNRESOLVED	high_copy
+dep1	gap0693	OZ418353.1	22659296	22659395	closed_genesearch	r1	genesearch	no_phasable_reads	FILLED	fill_unscored
+dep1	gap0694	OZ418353.1	34087994	34088093	N				UNRESOLVED	tandem
+dep1	gap0695	OZ418353.1	78197694	78197793	N				UNRESOLVED	high_copy
+dep1	gap0696	OZ418353.1	78913791	78913890	N				UNRESOLVED	dropout
+dep1	gap0697	OZ418353.1	81257267	81257366	N				UNRESOLVED	dropout
+dep1	gap0698	OZ418353.1	82896415	82896514	N				UNRESOLVED	high_copy
+dep1	gap0699	OZ418353.1	83357645	83357744	N				UNRESOLVED	dropout
+dep1	gap0700	OZ418353.1	83916127	83916226	N				UNRESOLVED	high_copy
+dep1	gap0701	OZ418353.1	86141224	86141323	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep1	gap0702	OZ418353.1	90758916	90759015	N				UNRESOLVED	dropout
+dep1	gap0703	OZ418353.1	96124263	96124362	N				UNRESOLVED	high_copy
+dep1	gap0704	OZ418353.1	96241006	96241105	N				UNRESOLVED	dropout
+dep1	gap0705	OZ418353.1	96482614	96482713	N				UNRESOLVED	high_copy
+dep1	gap0706	OZ418353.1	96558601	96558700	N				UNRESOLVED	high_copy
+dep1	gap0707	OZ418353.1	98071720	98071819	closed_genesearch	r1	genesearch	no_phasable_reads	FILLED	fill_unscored
+dep1	gap0708	OZ418353.1	103459283	103459382	N				UNRESOLVED	high_copy
+dep1	gap0709	OZ418353.1	104143551	104143650	N				UNRESOLVED	high_copy
+dep1	gap0710	OZ418353.1	104197291	104197390	closed_strict	r1	insert	no_phasable_reads	FILLED_2COPY	hom_one_hap
+dep1	gap0711	OZ418353.1	105486657	105486756	N				UNRESOLVED	ga_tract
+dep1	gap0712	OZ418353.1	109848948	109849047	N				UNRESOLVED	high_copy
+dep1	gap0713	OZ418353.1	109926065	109926164	N				UNRESOLVED	high_copy
+dep1	gap0714	OZ418353.1	112670011	112670110	N				UNRESOLVED	dropout
+dep1	gap0715	OZ418353.1	113723899	113723998	N				UNRESOLVED	high_copy
+dep1	gap0716	OZ418353.1	114708167	114708266	closed_genesearch	lr	genesearch	no_phasable_reads	FILLED_1COPY	one_copy_fill
+dep1	gap0717	OZ418353.1	123131309	123131408	closed_genesearch	r1	genesearch	no_phasable_reads	FILLED_1COPY	one_copy_fill
+dep1	gap0718	OZ418353.1	125483646	125483745	N				UNRESOLVED	high_copy
+dep1	gap0719	OZ418353.1	127648005	127648104	N				UNRESOLVED	tandem
+dep1	gap0720	OZ418353.1	129632227	129632326	N				UNRESOLVED	dropout
+dep1	gap0721	OZ418353.1	129750116	129750215	N				UNRESOLVED	other
+dep1	gap0722	OZ418353.1	129864335	129864434	N				UNRESOLVED	high_copy
+dep1	gap0723	OZ418353.1	131641913	131642012	closed_genesearch	r1	genesearch	no_phasable_reads	FILLED	fill_unscored
+dep1	gap0724	OZ418353.1	144089122	144089221	N				UNRESOLVED	dropout
+dep1	gap0725	OZ418353.1	147139893	147140092	N				UNRESOLVED	tandem
+dep1	gap0726	OZ418353.1	148042443	148042542	N				UNRESOLVED	tandem
+dep1	gap0727	OZ418354.1	905368	905567	N				UNRESOLVED	tandem
+dep1	gap0728	OZ418354.1	1952361	1952560	N				UNRESOLVED	tandem
+dep1	gap0729	OZ418354.1	2628738	2628937	N				UNRESOLVED	tandem
+dep1	gap0730	OZ418354.1	6210487	6210686	N				UNRESOLVED	high_copy
+dep1	gap0731	CEVFMK010000049.1	109558	109657	N				UNRESOLVED	tandem
+dep2	gap0001	OZ418081.1	3158731	3158830	N				UNRESOLVED	tandem
+dep2	gap0002	OZ418081.1	3550587	3550686	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0003	OZ418081.1	7755962	7756061	closed_genesearch	r1	genesearch	flanks_tie	UNRESOLVED	dropout
+dep2	gap0004	OZ418081.1	8512649	8512748	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep2	gap0005	OZ418081.1	9074622	9074721	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0006	OZ418081.1	9399747	9399846	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0007	OZ418081.1	21163798	21163897	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0008	OZ418081.1	31076001	31076100	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0009	OZ418081.1	34129317	34129416	N				UNRESOLVED	other
+dep2	gap0010	OZ418081.1	34170146	34170245	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0011	OZ418081.1	34275647	34275746	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0012	OZ418081.1	37531813	37531912	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0013	OZ418081.1	37722947	37723046	N				UNRESOLVED	dropout
+dep2	gap0014	OZ418081.1	37888072	37888171	closed_genesearch	r1	genesearch	undecided	FILLED_2COPY	hom_one_hap
+dep2	gap0015	OZ418081.1	38996009	38996108	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0016	OZ418081.1	52534051	52534150	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0017	OZ418081.1	60595503	60595602	N				UNRESOLVED	other
+dep2	gap0018	OZ418081.1	62247346	62247445	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0019	OZ418081.1	63469482	63469581	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0020	OZ418081.1	65014049	65014148	N				UNRESOLVED	dropout
+dep2	gap0021	OZ418081.1	65687675	65687774	closed_strict	r1	join	flanks_tie	JOINED	join
+dep2	gap0022	OZ418081.1	68648366	68648465	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0023	OZ418081.1	71841172	71841271	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep2	gap0024	OZ418081.1	80012224	80012323	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0025	OZ418081.1	88603790	88603889	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0026	OZ418081.1	107011465	107011564	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0027	OZ418081.1	109376203	109376302	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0028	OZ418081.1	110763174	110763273	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0029	OZ418081.1	115325574	115325673	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0030	OZ418081.1	118488110	118488209	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	other
+dep2	gap0031	OZ418081.1	121925409	121925508	N				UNRESOLVED	high_copy
+dep2	gap0032	OZ418081.1	128514460	128514559	N				UNRESOLVED	high_copy
+dep2	gap0033	OZ418081.1	129313399	129313498	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0034	OZ418081.1	131038669	131038768	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0035	OZ418081.1	140027111	140027210	N				FILLED_REPEAT	fill_repeat
+dep2	gap0036	OZ418081.1	163791906	163792005	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0037	OZ418081.1	168708505	168708604	N				UNRESOLVED	dropout
+dep2	gap0038	OZ418081.1	168805242	168805341	N				FILLED_REPEAT	fill_repeat
+dep2	gap0039	OZ418081.1	170315532	170315631	N				UNRESOLVED	tandem
+dep2	gap0040	OZ418081.1	173300004	173300103	N				UNRESOLVED	dropout
+dep2	gap0041	OZ418081.1	184525353	184525452	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0042	OZ418081.1	184749366	184749465	closed_genesearch	r2	genesearch	not_tested	FILLED_1COPY	one_copy_fill
+dep2	gap0043	OZ418081.1	190978329	190978428	closed_genesearch	lr	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0044	OZ418081.1	202567471	202567570	closed_strict	r1	join	flanks_tie	JOINED	join
+dep2	gap0045	OZ418081.1	211372490	211372589	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0046	OZ418081.1	211630604	211630703	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0047	OZ418081.1	211997263	211997362	N				UNRESOLVED	tandem
+dep2	gap0048	OZ418081.1	212258492	212258591	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0049	OZ418081.1	212780774	212780873	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0050	OZ418081.1	212922841	212922940	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0051	OZ418081.1	213172205	213172304	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0052	OZ418081.1	213234629	213234728	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0053	OZ418081.1	213692200	213692299	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0054	OZ418081.1	214389815	214389914	N				UNRESOLVED	high_copy
+dep2	gap0055	OZ418081.1	214565404	214565503	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0056	OZ418081.1	214611203	214611302	closed_strict	r1	insert	no_target_cross	UNRESOLVED	other
+dep2	gap0057	OZ418081.1	214846388	214846487	N				FILLED_REPEAT	fill_repeat
+dep2	gap0058	OZ418081.1	234170154	234170253	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0059	OZ418081.1	234371983	234372082	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0060	OZ418081.1	235497309	235497408	N				UNRESOLVED	dropout
+dep2	gap0061	OZ418081.1	240829919	240830018	N				FILLED_REPEAT	fill_repeat
+dep2	gap0062	OZ418081.1	244974133	244974232	N				UNRESOLVED	high_copy
+dep2	gap0063	OZ418081.1	248631251	248631350	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0064	OZ418081.1	260574656	260574755	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0065	OZ418081.1	261414536	261414635	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0066	OZ418081.1	276802283	276802382	N				UNRESOLVED	tandem
+dep2	gap0067	OZ418081.1	277310641	277310740	N				UNRESOLVED	other
+dep2	gap0068	OZ418081.1	279234247	279234346	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0069	OZ418081.1	279444739	279444838	N				UNRESOLVED	ga_tract
+dep2	gap0070	OZ418081.1	282267502	282267601	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0071	OZ418081.1	283754041	283754140	N				UNRESOLVED	tandem
+dep2	gap0072	OZ418081.1	296460072	296460171	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0073	OZ418081.1	296536491	296536590	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0074	OZ418081.1	301295395	301295494	N				UNRESOLVED	tandem
+dep2	gap0075	OZ418081.1	303420726	303420825	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0076	OZ418081.1	305074870	305074969	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0077	OZ418081.1	305222034	305222133	N				FILLED_REPEAT	fill_repeat
+dep2	gap0078	OZ418081.1	305694517	305694616	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0079	OZ418081.1	312340003	312340102	N				UNRESOLVED	dropout
+dep2	gap0080	OZ418081.1	313471009	313471108	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0081	OZ418081.1	314528487	314528586	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0082	OZ418081.1	317813466	317813565	N				UNRESOLVED	other
+dep2	gap0083	OZ418081.1	321945356	321945455	N				UNRESOLVED	other
+dep2	gap0084	OZ418082.1	2273994	2274093	N				UNRESOLVED	tandem
+dep2	gap0085	OZ418082.1	4796425	4796524	N				UNRESOLVED	dropout
+dep2	gap0086	OZ418082.1	15089742	15089841	N				FILLED_REPEAT	fill_repeat
+dep2	gap0087	OZ418082.1	17331230	17331329	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0088	OZ418082.1	17884780	17884879	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0089	OZ418082.1	18281458	18281557	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0090	OZ418082.1	18536655	18536754	N				UNRESOLVED	dropout
+dep2	gap0091	OZ418082.1	19272756	19272855	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0092	OZ418082.1	21242979	21243078	N				UNRESOLVED	dropout
+dep2	gap0093	OZ418082.1	28093714	28093813	N				UNRESOLVED	other
+dep2	gap0094	OZ418082.1	28581495	28581594	N				UNRESOLVED	high_copy
+dep2	gap0095	OZ418082.1	36342630	36342729	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0096	OZ418082.1	48570062	48570161	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0097	OZ418082.1	63789366	63789465	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0098	OZ418082.1	64069998	64070097	closed_strict	lr	join	own_or_identical	JOINED	join
+dep2	gap0099	OZ418082.1	80246001	80246100	N				FILLED_REPEAT	fill_repeat
+dep2	gap0100	OZ418082.1	80726504	80726603	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0101	OZ418082.1	83032240	83032339	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0102	OZ418082.1	86347633	86347732	N				UNRESOLVED	other
+dep2	gap0103	OZ418082.1	86702515	86702614	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0104	OZ418082.1	87727033	87727132	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0105	OZ418082.1	88241968	88242067	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0106	OZ418082.1	88969735	88969834	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0107	OZ418082.1	89632399	89632498	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0108	OZ418082.1	100233002	100233101	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0109	OZ418082.1	101795510	101795609	N				UNRESOLVED	dropout
+dep2	gap0110	OZ418082.1	102966262	102966361	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0111	OZ418082.1	105216198	105216297	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0112	OZ418082.1	113557612	113557711	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0113	OZ418082.1	121678220	121678319	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0114	OZ418082.1	123826944	123827043	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0115	OZ418082.1	125591536	125591635	N				UNRESOLVED	high_copy
+dep2	gap0116	OZ418082.1	127065276	127065375	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0117	OZ418082.1	127397321	127397420	N				UNRESOLVED	other
+dep2	gap0118	OZ418082.1	128171966	128172065	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0119	OZ418082.1	128317230	128317329	N				UNRESOLVED	ga_tract
+dep2	gap0120	OZ418082.1	144224986	144225085	N				UNRESOLVED	tandem
+dep2	gap0121	OZ418082.1	149927443	149927542	N				UNRESOLVED	tandem
+dep2	gap0122	OZ418082.1	152414899	152414998	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep2	gap0123	OZ418082.1	163009359	163009458	N				UNRESOLVED	other
+dep2	gap0124	OZ418082.1	166021125	166021224	N				UNRESOLVED	high_copy
+dep2	gap0125	OZ418082.1	168156370	168156469	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0126	OZ418082.1	169109470	169109569	N				UNRESOLVED	dropout
+dep2	gap0127	OZ418082.1	169163427	169163526	N				UNRESOLVED	other
+dep2	gap0128	OZ418082.1	172197723	172197822	N				UNRESOLVED	other
+dep2	gap0129	OZ418082.1	172360454	172360553	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0130	OZ418082.1	178315435	178315534	N				UNRESOLVED	high_copy
+dep2	gap0131	OZ418082.1	180047928	180048027	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0132	OZ418082.1	181869869	181869968	closed_strict	lr	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0133	OZ418082.1	182518703	182518802	N				UNRESOLVED	high_copy
+dep2	gap0134	OZ418082.1	184298359	184298458	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0135	OZ418082.1	184392894	184392993	N				UNRESOLVED	high_copy
+dep2	gap0136	OZ418082.1	184960999	184961098	N				FILLED_REPEAT	fill_repeat
+dep2	gap0137	OZ418082.1	185173506	185173605	N				UNRESOLVED	high_copy
+dep2	gap0138	OZ418082.1	185537026	185537125	N				FILLED_REPEAT	fill_repeat
+dep2	gap0139	OZ418082.1	189680372	189680471	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0140	OZ418082.1	189828912	189829011	N				UNRESOLVED	high_copy
+dep2	gap0141	OZ418082.1	192703933	192704032	N				UNRESOLVED	other
+dep2	gap0142	OZ418082.1	193466637	193466736	N				UNRESOLVED	high_copy
+dep2	gap0143	OZ418082.1	200965585	200965684	closed_strict	r1	join	undecided	JOINED	join
+dep2	gap0144	OZ418082.1	201652899	201652998	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0145	OZ418082.1	202408299	202408398	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0146	OZ418082.1	220979488	220979587	N				UNRESOLVED	dropout
+dep2	gap0147	OZ418082.1	228983761	228983860	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0148	OZ418082.1	229116312	229116411	closed_strict	r1	join	no_target_cross	JOINED	join
+dep2	gap0149	OZ418082.1	247841508	247841607	N				UNRESOLVED	tandem
+dep2	gap0150	OZ418082.1	249042608	249042707	N				FILLED_REPEAT	fill_repeat
+dep2	gap0151	OZ418082.1	250024592	250024691	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0152	OZ418082.1	250089829	250089928	N				UNRESOLVED	high_copy
+dep2	gap0153	OZ418082.1	250203809	250203908	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0154	OZ418082.1	252041976	252042075	N				UNRESOLVED	tandem
+dep2	gap0155	OZ418082.1	253434148	253434247	N				UNRESOLVED	tandem
+dep2	gap0156	OZ418082.1	256263887	256263986	N				UNRESOLVED	tandem
+dep2	gap0157	OZ418082.1	257593600	257593699	N				UNRESOLVED	high_copy
+dep2	gap0158	OZ418082.1	259025214	259025313	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0159	OZ418082.1	259262004	259262103	closed_strict	r1	insert	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0160	OZ418082.1	260279227	260279326	N				UNRESOLVED	tandem
+dep2	gap0161	OZ418082.1	260986417	260986516	N				UNRESOLVED	other
+dep2	gap0162	OZ418082.1	265874314	265874413	closed_genesearch	r1	genesearch	no_target_cross	2ALLELES	het
+dep2	gap0163	OZ418082.1	266179434	266179533	N				FILLED_REPEAT	fill_repeat
+dep2	gap0164	OZ418082.1	270499379	270499478	N				UNRESOLVED	high_copy
+dep2	gap0165	OZ418082.1	271133153	271133252	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0166	OZ418082.1	271320526	271320625	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0167	OZ418082.1	277399391	277399490	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0168	OZ418082.1	277465903	277466002	N				UNRESOLVED	dropout
+dep2	gap0169	OZ418082.1	277504245	277504344	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0170	OZ418082.1	277574953	277575052	N				UNRESOLVED	dropout
+dep2	gap0171	OZ418082.1	277796577	277796676	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0172	OZ418082.1	278267636	278267735	N				UNRESOLVED	other
+dep2	gap0173	OZ418082.1	278715102	278715201	N				UNRESOLVED	tandem
+dep2	gap0174	OZ418082.1	279424689	279424788	N				UNRESOLVED	tandem
+dep2	gap0175	OZ418082.1	280865523	280865622	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0176	OZ418082.1	281597302	281597401	N				UNRESOLVED	dropout
+dep2	gap0177	OZ418082.1	282753400	282753499	N				UNRESOLVED	dropout
+dep2	gap0178	OZ418082.1	283752282	283752381	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	dropout
+dep2	gap0179	OZ418082.1	284429277	284429376	N				UNRESOLVED	ga_tract
+dep2	gap0180	OZ418082.1	285147195	285147294	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep2	gap0181	OZ418082.1	285966891	285966990	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0182	OZ418082.1	288296117	288296216	closed_strict	r1	join	wrong_allele	JOINED	join
+dep2	gap0183	OZ418082.1	290351546	290351645	closed_genesearch	r1	genesearch	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0184	OZ418082.1	311075187	311075286	N				UNRESOLVED	other
+dep2	gap0185	OZ418082.1	311522575	311522674	N				FILLED_REPEAT	fill_repeat
+dep2	gap0186	OZ418082.1	314231477	314231576	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0187	OZ418082.1	315156507	315156606	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0188	OZ418082.1	317102478	317102577	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0189	OZ418082.1	317581389	317581488	N				UNRESOLVED	dropout
+dep2	gap0190	OZ418082.1	320569557	320569656	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0191	OZ418082.1	320678646	320678745	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0192	OZ418082.1	321125324	321125423	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0193	OZ418082.1	321383657	321383756	N				UNRESOLVED	tandem
+dep2	gap0194	OZ418082.1	323331461	323331560	N				UNRESOLVED	tandem
+dep2	gap0195	OZ418082.1	324225042	324225141	N				UNRESOLVED	ga_tract
+dep2	gap0196	OZ418082.1	325030393	325030492	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0197	OZ418083.1	5677779	5677878	N				UNRESOLVED	dropout
+dep2	gap0198	OZ418083.1	9105095	9105194	N				UNRESOLVED	other
+dep2	gap0199	OZ418083.1	9451272	9451371	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0200	OZ418083.1	15773641	15773740	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0201	OZ418083.1	16080211	16080310	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	dropout
+dep2	gap0202	OZ418083.1	22556735	22556834	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0203	OZ418083.1	23791810	23791909	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0204	OZ418083.1	44341205	44341304	N				UNRESOLVED	dropout
+dep2	gap0205	OZ418083.1	53809923	53810022	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0206	OZ418083.1	55098676	55098775	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0207	OZ418083.1	69189884	69189983	N				UNRESOLVED	other
+dep2	gap0208	OZ418083.1	78054502	78054601	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0209	OZ418083.1	82040146	82040245	N				UNRESOLVED	high_copy
+dep2	gap0210	OZ418083.1	82478840	82478939	N				FILLED_REPEAT	fill_repeat
+dep2	gap0211	OZ418083.1	83961009	83961108	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0212	OZ418083.1	86388165	86388264	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0213	OZ418083.1	94373178	94373277	N				UNRESOLVED	high_copy
+dep2	gap0214	OZ418083.1	94558781	94558880	N				UNRESOLVED	high_copy
+dep2	gap0215	OZ418083.1	96800713	96800812	N				UNRESOLVED	tandem
+dep2	gap0216	OZ418083.1	98180578	98180677	N				UNRESOLVED	tandem
+dep2	gap0217	OZ418083.1	99429013	99429112	N				FILLED_REPEAT	fill_repeat
+dep2	gap0218	OZ418083.1	100524111	100524210	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	dropout
+dep2	gap0219	OZ418083.1	123314967	123315066	N				UNRESOLVED	ga_tract
+dep2	gap0220	OZ418083.1	123916684	123916783	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0221	OZ418083.1	123948539	123948638	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0222	OZ418083.1	124270803	124270902	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0223	OZ418083.1	124301412	124301511	N				UNRESOLVED	dropout
+dep2	gap0224	OZ418083.1	126190859	126190958	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0225	OZ418083.1	127358633	127358732	N				UNRESOLVED	dropout
+dep2	gap0226	OZ418083.1	128110722	128110821	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0227	OZ418083.1	129550156	129550255	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0228	OZ418083.1	133353159	133353258	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0229	OZ418083.1	133470871	133470970	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0230	OZ418083.1	134643093	134643192	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0231	OZ418083.1	135179646	135179745	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0232	OZ418083.1	138182455	138182554	N				2ALLELES	het
+dep2	gap0233	OZ418083.1	141595585	141595684	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0234	OZ418083.1	142624026	142624125	N				FILLED_REPEAT	fill_repeat
+dep2	gap0235	OZ418083.1	143236343	143236442	closed_strict	r1	insert	no_target_cross	UNRESOLVED	other
+dep2	gap0236	OZ418083.1	145059278	145059377	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0237	OZ418083.1	145109378	145109477	closed_genesearch	r1	genesearch	wrong_allele	UNRESOLVED	high_copy
+dep2	gap0238	OZ418083.1	145717212	145717311	N				UNRESOLVED	ga_tract
+dep2	gap0239	OZ418083.1	147346863	147346962	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0240	OZ418083.1	153697917	153698016	N				UNRESOLVED	dropout
+dep2	gap0241	OZ418083.1	154028184	154028283	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0242	OZ418083.1	175504989	175505088	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0243	OZ418083.1	175605863	175605962	N				UNRESOLVED	high_copy
+dep2	gap0244	OZ418083.1	177420653	177420752	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0245	OZ418083.1	177828995	177829094	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0246	OZ418083.1	187486296	187486395	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0247	OZ418083.1	199612485	199612584	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0248	OZ418083.1	218475922	218476021	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0249	OZ418083.1	218513057	218513156	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0250	OZ418083.1	218578359	218578458	N				UNRESOLVED	other
+dep2	gap0251	OZ418083.1	218729438	218729537	N				UNRESOLVED	high_copy
+dep2	gap0252	OZ418083.1	222038158	222038257	closed_strict	lr	join	own_or_identical	JOINED	join
+dep2	gap0253	OZ418083.1	233490387	233490486	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0254	OZ418083.1	241909717	241909816	N				FILLED_REPEAT	fill_repeat
+dep2	gap0255	OZ418083.1	262731958	262732057	closed_genesearch	r1	genesearch	no_phasable_reads	FILLED	fill_unscored
+dep2	gap0256	OZ418083.1	269007230	269007329	closed_genesearch	r1	genesearch	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0257	OZ418083.1	269550120	269550219	closed_strict	r1	join	own_or_identical	UNRESOLVED	tandem
+dep2	gap0258	OZ418083.1	274738488	274738587	N				UNRESOLVED	tandem
+dep2	gap0259	OZ418083.1	274961505	274961604	N				UNRESOLVED	tandem
+dep2	gap0260	OZ418083.1	277330605	277330704	N				UNRESOLVED	tandem
+dep2	gap0261	OZ418084.1	878168	878267	closed_strict	r1	join	own_or_identical	UNRESOLVED	other
+dep2	gap0262	OZ418084.1	1843384	1843483	N				UNRESOLVED	dropout
+dep2	gap0263	OZ418084.1	2874657	2874756	N				UNRESOLVED	dropout
+dep2	gap0264	OZ418084.1	4968489	4968588	N				UNRESOLVED	tandem
+dep2	gap0265	OZ418084.1	5269291	5269390	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep2	gap0266	OZ418084.1	6912522	6912621	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0267	OZ418084.1	17117056	17117155	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0268	OZ418084.1	17673409	17673508	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	dropout
+dep2	gap0269	OZ418084.1	18901373	18901472	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0270	OZ418084.1	19814540	19814639	N				UNRESOLVED	dropout
+dep2	gap0271	OZ418084.1	20975153	20975252	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0272	OZ418084.1	23440278	23440377	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0273	OZ418084.1	23627911	23628010	N				UNRESOLVED	high_copy
+dep2	gap0274	OZ418084.1	23704820	23704919	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0275	OZ418084.1	23961169	23961268	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0276	OZ418084.1	25121345	25121444	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0277	OZ418084.1	25432202	25432301	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0278	OZ418084.1	25821071	25821170	closed_strict	r1	join	wrong_allele	JOINED	join
+dep2	gap0279	OZ418084.1	27247325	27247424	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0280	OZ418084.1	27402992	27403091	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0281	OZ418084.1	27552334	27552433	N				UNRESOLVED	dropout
+dep2	gap0282	OZ418084.1	27721774	27721873	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep2	gap0283	OZ418084.1	28430540	28430639	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0284	OZ418084.1	28559266	28559365	N				UNRESOLVED	high_copy
+dep2	gap0285	OZ418084.1	28700209	28700308	N				UNRESOLVED	dropout
+dep2	gap0286	OZ418084.1	29542285	29542384	N				UNRESOLVED	high_copy
+dep2	gap0287	OZ418084.1	30227900	30227999	closed_strict	r1	insert	no_target_cross	FILLED	fill_unclear
+dep2	gap0288	OZ418084.1	30561429	30561528	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep2	gap0289	OZ418084.1	31127371	31127470	N				UNRESOLVED	dropout
+dep2	gap0290	OZ418084.1	31183690	31183789	closed_strict	r1	join	no_target_cross	JOINED	join
+dep2	gap0291	OZ418084.1	32871299	32871398	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0292	OZ418084.1	33412149	33412248	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0293	OZ418084.1	38932221	38932320	N				FILLED_REPEAT	fill_repeat
+dep2	gap0294	OZ418084.1	40848975	40849074	N				UNRESOLVED	high_copy
+dep2	gap0295	OZ418084.1	41902215	41902314	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep2	gap0296	OZ418084.1	41957609	41957708	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0297	OZ418084.1	45128341	45128440	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0298	OZ418084.1	45972384	45972483	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0299	OZ418084.1	50885753	50885852	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0300	OZ418084.1	51638042	51638141	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0301	OZ418084.1	53705614	53705713	N				FILLED_REPEAT	fill_repeat
+dep2	gap0302	OZ418084.1	55385193	55385292	N				UNRESOLVED	dropout
+dep2	gap0303	OZ418084.1	55491679	55491778	N				FILLED_REPEAT	fill_repeat
+dep2	gap0304	OZ418084.1	55975098	55975197	closed_strict	r1	insert	no_target_cross	FILLED	fill_unclear
+dep2	gap0305	OZ418084.1	56285433	56285532	closed_genesearch	r1	genesearch	own_or_identical	2ALLELES	het
+dep2	gap0306	OZ418084.1	58258784	58258883	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0307	OZ418084.1	64007783	64007882	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0308	OZ418084.1	72663531	72663630	N				UNRESOLVED	ga_tract
+dep2	gap0309	OZ418084.1	87571675	87571774	N				UNRESOLVED	dropout
+dep2	gap0310	OZ418084.1	94564775	94564874	N				FILLED_REPEAT	fill_repeat
+dep2	gap0311	OZ418084.1	98413995	98414094	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep2	gap0312	OZ418084.1	102460777	102460876	N				UNRESOLVED	dropout
+dep2	gap0313	OZ418084.1	102664560	102664659	N				UNRESOLVED	high_copy
+dep2	gap0314	OZ418084.1	105154360	105154459	closed_strict	r1	join	undecided	JOINED	join
+dep2	gap0315	OZ418084.1	109144478	109144577	N				UNRESOLVED	tandem
+dep2	gap0316	OZ418084.1	109242644	109242743	N				UNRESOLVED	high_copy
+dep2	gap0317	OZ418084.1	109403725	109403824	N				UNRESOLVED	dropout
+dep2	gap0318	OZ418084.1	109950736	109950835	N				UNRESOLVED	other
+dep2	gap0319	OZ418084.1	119652163	119652262	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0320	OZ418084.1	121158356	121158455	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep2	gap0321	OZ418084.1	122998427	122998526	N				UNRESOLVED	other
+dep2	gap0322	OZ418084.1	123938128	123938227	N				FILLED_REPEAT	fill_repeat
+dep2	gap0323	OZ418084.1	124003550	124003649	N				FILLED_REPEAT	fill_repeat
+dep2	gap0324	OZ418084.1	124305521	124305620	N				UNRESOLVED	high_copy
+dep2	gap0325	OZ418084.1	124882309	124882408	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0326	OZ418084.1	125511179	125511278	closed_genesearch	lr	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0327	OZ418084.1	125793470	125793569	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0328	OZ418084.1	126060834	126060933	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0329	OZ418084.1	126179514	126179613	N				FILLED_REPEAT	fill_repeat
+dep2	gap0330	OZ418084.1	127624683	127624782	N				FILLED_REPEAT	fill_repeat
+dep2	gap0331	OZ418084.1	128174427	128174526	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0332	OZ418084.1	140407519	140407618	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0333	OZ418084.1	142888740	142888839	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0334	OZ418084.1	142976223	142976322	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0335	OZ418084.1	145137099	145137198	N				UNRESOLVED	tandem
+dep2	gap0336	OZ418084.1	145699429	145699528	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0337	OZ418084.1	146253313	146253412	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0338	OZ418084.1	148320752	148320851	closed_genesearch	r1	genesearch	flanks_tie	FILLED_2COPY	hom_one_hap
+dep2	gap0339	OZ418084.1	148518699	148518798	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0340	OZ418084.1	161441551	161441650	N				FILLED_REPEAT	fill_repeat
+dep2	gap0341	OZ418084.1	178334039	178334138	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep2	gap0342	OZ418084.1	223584205	223584304	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0343	OZ418084.1	227809611	227809710	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0344	OZ418084.1	235408588	235408687	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0345	OZ418084.1	238960197	238960296	N				UNRESOLVED	tandem
+dep2	gap0346	OZ418084.1	247453978	247454077	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0347	OZ418084.1	249823912	249824011	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0348	OZ418084.1	250003060	250003159	N				UNRESOLVED	ga_tract
+dep2	gap0349	OZ418084.1	250398248	250398347	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0350	OZ418084.1	255150216	255150315	N				UNRESOLVED	tandem
+dep2	gap0351	OZ418084.1	255853102	255853201	N				UNRESOLVED	dropout
+dep2	gap0352	OZ418084.1	258713112	258713211	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0353	OZ418085.1	17349924	17350023	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep2	gap0354	OZ418085.1	17433042	17433141	closed_strict	r1	join	undecided	JOINED	join
+dep2	gap0355	OZ418085.1	20294193	20294292	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0356	OZ418085.1	22817630	22817729	N				UNRESOLVED	ga_tract
+dep2	gap0357	OZ418085.1	38463908	38464007	closed_genesearch	r1	genesearch	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0358	OZ418085.1	44488662	44488761	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0359	OZ418085.1	73873482	73873581	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0360	OZ418085.1	82151005	82151104	N				UNRESOLVED	tandem
+dep2	gap0361	OZ418085.1	86095706	86095805	closed_strict	r2	join	not_tested	UNRESOLVED	tandem
+dep2	gap0362	OZ418085.1	92790806	92790905	N				UNRESOLVED	high_copy
+dep2	gap0363	OZ418085.1	99040661	99040760	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0364	OZ418085.1	102006758	102006857	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0365	OZ418085.1	105635274	105635373	N				UNRESOLVED	dropout
+dep2	gap0366	OZ418085.1	108811099	108811198	N				FILLED_REPEAT	fill_repeat
+dep2	gap0367	OZ418085.1	110771720	110771819	N				UNRESOLVED	high_copy
+dep2	gap0368	OZ418085.1	113149885	113149984	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0369	OZ418085.1	114328407	114328506	closed_strict	r1	insert	own_or_identical	2ALLELES	het
+dep2	gap0370	OZ418085.1	123473626	123473725	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0371	OZ418085.1	123906509	123906608	N				UNRESOLVED	ga_tract
+dep2	gap0372	OZ418085.1	124342517	124342616	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0373	OZ418085.1	133905076	133905175	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0374	OZ418085.1	135498278	135498377	N				UNRESOLVED	dropout
+dep2	gap0375	OZ418085.1	139675996	139676095	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0376	OZ418085.1	143590245	143590344	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0377	OZ418085.1	148832190	148832289	N				UNRESOLVED	dropout
+dep2	gap0378	OZ418085.1	150180492	150180591	closed_strict	r1	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0379	OZ418085.1	154308587	154308686	closed_strict	r1	join	undecided	JOINED	join
+dep2	gap0380	OZ418085.1	160527485	160527584	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0381	OZ418085.1	163486114	163486213	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0382	OZ418085.1	164014422	164014521	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0383	OZ418085.1	168188161	168188260	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0384	OZ418085.1	169110036	169110135	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0385	OZ418085.1	174594777	174594876	N				UNRESOLVED	other
+dep2	gap0386	OZ418085.1	175968245	175968344	N				UNRESOLVED	other
+dep2	gap0387	OZ418085.1	231079831	231079930	N				UNRESOLVED	tandem
+dep2	gap0388	OZ418085.1	231157932	231158031	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0389	OZ418085.1	231311155	231311254	N				UNRESOLVED	dropout
+dep2	gap0390	OZ418085.1	234130267	234130366	N				UNRESOLVED	tandem
+dep2	gap0391	OZ418085.1	235214498	235214597	N				UNRESOLVED	tandem
+dep2	gap0392	OZ418085.1	236026565	236026664	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0393	OZ418086.1	2347537	2347636	N				UNRESOLVED	high_copy
+dep2	gap0394	OZ418086.1	6019757	6019856	N				UNRESOLVED	high_copy
+dep2	gap0395	OZ418086.1	8491857	8491956	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0396	OZ418086.1	12363601	12363700	N				UNRESOLVED	other
+dep2	gap0397	OZ418086.1	15266355	15266454	N				UNRESOLVED	other
+dep2	gap0398	OZ418086.1	21607622	21607721	N				UNRESOLVED	high_copy
+dep2	gap0399	OZ418086.1	24639078	24639177	N				UNRESOLVED	other
+dep2	gap0400	OZ418086.1	29650344	29650443	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0401	OZ418086.1	29682213	29682312	N				UNRESOLVED	tandem
+dep2	gap0402	OZ418086.1	30258871	30258970	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0403	OZ418086.1	32282866	32282965	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unclear
+dep2	gap0404	OZ418086.1	33257176	33257275	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0405	OZ418086.1	34090466	34090565	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0406	OZ418086.1	34795904	34796003	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0407	OZ418086.1	36909147	36909246	N				UNRESOLVED	tandem
+dep2	gap0408	OZ418086.1	37765614	37765713	closed_genesearch	lr	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0409	OZ418086.1	39541547	39541646	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0410	OZ418086.1	42610807	42610906	closed_strict	r1	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0411	OZ418086.1	59490817	59490916	N				UNRESOLVED	high_copy
+dep2	gap0412	OZ418086.1	68136174	68136273	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0413	OZ418086.1	68768388	68768487	N				FILLED_REPEAT	fill_repeat
+dep2	gap0414	OZ418086.1	71694154	71694253	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0415	OZ418086.1	72256724	72256823	N				UNRESOLVED	other
+dep2	gap0416	OZ418086.1	91138922	91139021	N				UNRESOLVED	high_copy
+dep2	gap0417	OZ418086.1	101732022	101732121	N				UNRESOLVED	high_copy
+dep2	gap0418	OZ418086.1	120405562	120405661	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0419	OZ418086.1	123519471	123519570	N				UNRESOLVED	high_copy
+dep2	gap0420	OZ418086.1	128322888	128322987	N				UNRESOLVED	dropout
+dep2	gap0421	OZ418086.1	135793299	135793398	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0422	OZ418086.1	136154764	136154863	N				FILLED_REPEAT	fill_repeat
+dep2	gap0423	OZ418086.1	138393259	138393358	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0424	OZ418086.1	143137637	143137736	N				UNRESOLVED	other
+dep2	gap0425	OZ418086.1	145779124	145779223	N				UNRESOLVED	tandem
+dep2	gap0426	OZ418086.1	145956489	145956588	N				UNRESOLVED	tandem
+dep2	gap0427	OZ418086.1	159361231	159361330	N				UNRESOLVED	dropout
+dep2	gap0428	OZ418086.1	159483956	159484055	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0429	OZ418086.1	159785953	159786052	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0430	OZ418086.1	165096719	165096818	closed_genesearch	r1	genesearch	own_or_identical	2ALLELES	het
+dep2	gap0431	OZ418086.1	167019444	167019543	N				FILLED_REPEAT	fill_repeat
+dep2	gap0432	OZ418086.1	173788637	173788736	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0433	OZ418086.1	174238387	174238486	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0434	OZ418086.1	179979765	179979864	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0435	OZ418086.1	187709253	187709352	N				FILLED_REPEAT	fill_repeat
+dep2	gap0436	OZ418086.1	193213098	193213197	N				FILLED_REPEAT	fill_repeat
+dep2	gap0437	OZ418086.1	193394117	193394216	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0438	OZ418086.1	193760913	193761012	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0439	OZ418086.1	194290835	194290934	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0440	OZ418086.1	194487771	194487870	closed_genesearch	r2	genesearch	not_tested	UNRESOLVED	dropout
+dep2	gap0441	OZ418086.1	194886790	194886889	N				UNRESOLVED	tandem
+dep2	gap0442	OZ418086.1	196054870	196054969	N				FILLED_REPEAT	fill_repeat
+dep2	gap0443	OZ418086.1	196587884	196587983	N				UNRESOLVED	high_copy
+dep2	gap0444	OZ418086.1	200926876	200926975	N				UNRESOLVED	other
+dep2	gap0445	OZ418086.1	205114739	205114838	N				UNRESOLVED	tandem
+dep2	gap0446	OZ418086.1	205448105	205448204	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0447	OZ418087.1	2122593	2122692	N				UNRESOLVED	high_copy
+dep2	gap0448	OZ418087.1	6988728	6988827	N				UNRESOLVED	high_copy
+dep2	gap0449	OZ418087.1	7594460	7594559	N				UNRESOLVED	other
+dep2	gap0450	OZ418087.1	8761055	8761154	N				UNRESOLVED	high_copy
+dep2	gap0451	OZ418087.1	8801214	8801313	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0452	OZ418087.1	9025881	9025980	N				UNRESOLVED	high_copy
+dep2	gap0453	OZ418087.1	15779271	15779370	N				UNRESOLVED	dropout
+dep2	gap0454	OZ418087.1	46063851	46063950	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0455	OZ418087.1	51605576	51605675	closed_genesearch	r1	genesearch	own_or_identical	UNRESOLVED	dropout
+dep2	gap0456	OZ418087.1	51861835	51861934	N				UNRESOLVED	high_copy
+dep2	gap0457	OZ418087.1	52258934	52259033	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0458	OZ418087.1	62477501	62477600	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0459	OZ418087.1	68384464	68384563	N				UNRESOLVED	dropout
+dep2	gap0460	OZ418087.1	74694743	74694842	closed_strict	r1	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0461	OZ418087.1	79112402	79112501	closed_genesearch	r1	genesearch	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0462	OZ418087.1	85670384	85670483	N				UNRESOLVED	ga_tract
+dep2	gap0463	OZ418087.1	95558162	95558261	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0464	OZ418087.1	102063199	102063298	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0465	OZ418087.1	104429160	104429259	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0466	OZ418087.1	121328687	121328786	N				UNRESOLVED	tandem
+dep2	gap0467	OZ418087.1	123106924	123107023	closed_genesearch	r1	genesearch	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0468	OZ418087.1	136946952	136947051	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0469	OZ418087.1	137716539	137716638	N				UNRESOLVED	tandem
+dep2	gap0470	OZ418087.1	138151122	138151221	N				UNRESOLVED	tandem
+dep2	gap0471	OZ418087.1	139696983	139697082	N				UNRESOLVED	tandem
+dep2	gap0472	OZ418087.1	140464706	140464805	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0473	OZ418087.1	146697432	146697531	closed_strict	r1	insert	own_or_identical	FILLED_2COPY	hom_one_hap
+dep2	gap0474	OZ418087.1	151453363	151453462	N				UNRESOLVED	tandem
+dep2	gap0475	OZ418087.1	151711754	151711853	N				UNRESOLVED	dropout
+dep2	gap0476	OZ418087.1	165090898	165090997	N				FILLED_REPEAT	fill_repeat
+dep2	gap0477	OZ418087.1	183981863	183981962	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0478	OZ418088.1	424382	424481	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0479	OZ418088.1	878099	878198	N				UNRESOLVED	dropout
+dep2	gap0480	OZ418088.1	1115551	1115650	N				UNRESOLVED	dropout
+dep2	gap0481	OZ418088.1	1440727	1440826	N				UNRESOLVED	high_copy
+dep2	gap0482	OZ418088.1	1514002	1514101	N				UNRESOLVED	ga_tract
+dep2	gap0483	OZ418088.1	1615713	1615812	N				FILLED_REPEAT	fill_repeat
+dep2	gap0484	OZ418088.1	2476922	2477021	N				UNRESOLVED	tandem
+dep2	gap0485	OZ418088.1	2591148	2591247	N				UNRESOLVED	tandem
+dep2	gap0486	OZ418088.1	2874354	2874453	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0487	OZ418088.1	2941696	2941795	N				UNRESOLVED	tandem
+dep2	gap0488	OZ418088.1	3462936	3463035	N				UNRESOLVED	tandem
+dep2	gap0489	OZ418088.1	3871627	3871726	N				UNRESOLVED	dropout
+dep2	gap0490	OZ418088.1	3970437	3970536	N				UNRESOLVED	tandem
+dep2	gap0491	OZ418088.1	4464205	4464304	N				UNRESOLVED	dropout
+dep2	gap0492	OZ418088.1	4930386	4930485	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0493	OZ418088.1	5521466	5521565	N				UNRESOLVED	other
+dep2	gap0494	OZ418088.1	6146602	6146701	N				UNRESOLVED	high_copy
+dep2	gap0495	OZ418088.1	6498841	6498940	closed_strict	r1	insert	flanks_tie	FILLED_2COPY	hom_one_hap
+dep2	gap0496	OZ418088.1	11908708	11908807	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0497	OZ418088.1	12283743	12283842	N				UNRESOLVED	dropout
+dep2	gap0498	OZ418088.1	12410879	12410978	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0499	OZ418088.1	12752817	12752916	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0500	OZ418088.1	18190735	18190834	N				UNRESOLVED	dropout
+dep2	gap0501	OZ418088.1	27265261	27265360	closed_genesearch	lr	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0502	OZ418088.1	31417103	31417202	N				FILLED_REPEAT	fill_repeat
+dep2	gap0503	OZ418088.1	31930500	31930599	N				UNRESOLVED	high_copy
+dep2	gap0504	OZ418088.1	32242454	32242553	N				UNRESOLVED	dropout
+dep2	gap0505	OZ418088.1	32318651	32318750	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0506	OZ418088.1	32463173	32463272	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0507	OZ418088.1	36053933	36054032	closed_genesearch	r2	genesearch	not_tested	FILLED_1COPY	one_copy_fill
+dep2	gap0508	OZ418088.1	48463119	48463218	N				UNRESOLVED	other
+dep2	gap0509	OZ418088.1	48887904	48888003	N				UNRESOLVED	other
+dep2	gap0510	OZ418088.1	56679959	56680058	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0511	OZ418088.1	66681617	66681716	N				UNRESOLVED	dropout
+dep2	gap0512	OZ418088.1	101193587	101193686	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0513	OZ418088.1	111160671	111160770	N				FILLED_REPEAT	fill_repeat
+dep2	gap0514	OZ418088.1	112357896	112357995	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0515	OZ418088.1	112528718	112528817	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0516	OZ418088.1	112966939	112967038	N				UNRESOLVED	tandem
+dep2	gap0517	OZ418088.1	113607914	113608013	N				UNRESOLVED	tandem
+dep2	gap0518	OZ418088.1	114640014	114640113	N				2ALLELES	het
+dep2	gap0519	OZ418088.1	132158500	132158599	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	other
+dep2	gap0520	OZ418088.1	142822981	142823080	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0521	OZ418088.1	144248253	144248352	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0522	OZ418088.1	147620938	147621037	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0523	OZ418088.1	150174087	150174186	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0524	OZ418088.1	156022405	156022504	N				FILLED_REPEAT	fill_repeat
+dep2	gap0525	OZ418088.1	156496137	156496236	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0526	OZ418088.1	158241500	158241599	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0527	OZ418088.1	158446127	158446226	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0528	OZ418088.1	158596979	158597078	closed_genesearch	lr	join	wrong_allele	JOINED	join
+dep2	gap0529	OZ418088.1	160929080	160929179	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0530	OZ418089.1	1465905	1466004	N				UNRESOLVED	dropout
+dep2	gap0531	OZ418089.1	1595998	1596097	N				UNRESOLVED	high_copy
+dep2	gap0532	OZ418089.1	2613715	2613814	N				FILLED_REPEAT	fill_repeat
+dep2	gap0533	OZ418089.1	26082230	26082329	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0534	OZ418089.1	39273501	39273600	N				UNRESOLVED	other
+dep2	gap0535	OZ418089.1	47606295	47606394	N				UNRESOLVED	dropout
+dep2	gap0536	OZ418089.1	64914494	64914593	N				FILLED_REPEAT	fill_repeat
+dep2	gap0537	OZ418089.1	69251400	69251499	N				UNRESOLVED	other
+dep2	gap0538	OZ418089.1	72932150	72932249	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0539	OZ418089.1	83606366	83606465	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0540	OZ418089.1	83807370	83807469	N				UNRESOLVED	high_copy
+dep2	gap0541	OZ418089.1	83902809	83902908	closed_genesearch	r2	genesearch	not_tested	FILLED_1COPY	one_copy_fill
+dep2	gap0542	OZ418089.1	84001573	84001672	N				FILLED_REPEAT	fill_repeat
+dep2	gap0543	OZ418089.1	88028841	88028940	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0544	OZ418089.1	88122124	88122223	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0545	OZ418089.1	88230509	88230608	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0546	OZ418089.1	91127583	91127682	closed_genesearch	r1	genesearch	own_or_identical	FILLED	fill_unscored
+dep2	gap0547	OZ418089.1	91692866	91692965	N				UNRESOLVED	other
+dep2	gap0548	OZ418089.1	91797638	91797737	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0549	OZ418089.1	92770614	92770713	N				UNRESOLVED	high_copy
+dep2	gap0550	OZ418089.1	93359714	93359813	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0551	OZ418089.1	99179055	99179154	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0552	OZ418089.1	100306550	100306649	N				UNRESOLVED	dropout
+dep2	gap0553	OZ418089.1	105023417	105023516	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0554	OZ418089.1	106570006	106570105	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0555	OZ418089.1	106884085	106884184	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0556	OZ418089.1	107087659	107087758	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0557	OZ418089.1	115182759	115182858	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0558	OZ418089.1	116293822	116293921	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0559	OZ418089.1	121865441	121865540	N				UNRESOLVED	dropout
+dep2	gap0560	OZ418089.1	132685513	132685612	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0561	OZ418089.1	144671796	144671895	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0562	OZ418089.1	145528458	145528557	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0563	OZ418089.1	147167068	147167167	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0564	OZ418089.1	147354716	147354815	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0565	OZ418089.1	147967092	147967191	N				UNRESOLVED	dropout
+dep2	gap0566	OZ418089.1	148399915	148400014	N				UNRESOLVED	high_copy
+dep2	gap0567	OZ418089.1	148566478	148566577	N				UNRESOLVED	dropout
+dep2	gap0568	OZ418089.1	148830364	148830463	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0569	OZ418089.1	149141591	149141690	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0570	OZ418089.1	151718860	151718959	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0571	OZ418089.1	155095754	155095853	N				UNRESOLVED	tandem
+dep2	gap0572	OZ418089.1	155228859	155228958	N				UNRESOLVED	tandem
+dep2	gap0573	OZ418090.1	2919503	2919602	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0574	OZ418090.1	4091807	4091906	closed_genesearch	lr	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0575	OZ418090.1	5600122	5600221	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0576	OZ418090.1	8164954	8165053	N				UNRESOLVED	dropout
+dep2	gap0577	OZ418090.1	8485039	8485138	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0578	OZ418090.1	9901568	9901667	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0579	OZ418090.1	24186987	24187086	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0580	OZ418090.1	24230037	24230136	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0581	OZ418090.1	28208246	28208345	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep2	gap0582	OZ418090.1	29929711	29929810	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0583	OZ418090.1	30858986	30859085	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0584	OZ418090.1	39576566	39576665	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0585	OZ418090.1	39972879	39972978	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0586	OZ418090.1	45835088	45835187	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0587	OZ418090.1	45953741	45953840	closed_strict	r1	join	not_tested	JOINED	join
+dep2	gap0588	OZ418090.1	53353841	53353940	closed_strict	r1	insert	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0589	OZ418090.1	74790728	74790827	N				UNRESOLVED	high_copy
+dep2	gap0590	OZ418090.1	76618154	76618253	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0591	OZ418090.1	84591508	84591607	closed_strict	lr	join	own_or_identical	JOINED	join
+dep2	gap0592	OZ418090.1	85394695	85394794	closed_strict	r1	join	no_target_cross	JOINED	join
+dep2	gap0593	OZ418090.1	87697260	87697359	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0594	OZ418090.1	90702624	90702723	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0595	OZ418090.1	91808504	91808603	N				UNRESOLVED	tandem
+dep2	gap0596	OZ418090.1	106895679	106895778	closed_strict	r1	join	no_target_cross	JOINED	join
+dep2	gap0597	OZ418090.1	107280238	107280337	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0598	OZ418090.1	113510610	113510709	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0599	OZ418090.1	114036206	114036305	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0600	OZ418090.1	115000240	115000339	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0601	OZ418090.1	115837276	115837375	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0602	OZ418090.1	116163060	116163159	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0603	OZ418090.1	117166770	117166869	N				UNRESOLVED	other
+dep2	gap0604	OZ418090.1	118443796	118443895	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0605	OZ418090.1	118602003	118602102	closed_strict	r1	join	no_target_cross	JOINED	join
+dep2	gap0606	OZ418090.1	120525313	120525412	N				UNRESOLVED	other
+dep2	gap0607	OZ418090.1	149443778	149443877	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0608	OZ418090.1	149765657	149765756	closed_strict	r1	join	no_target_cross	UNRESOLVED	tandem
+dep2	gap0609	OZ418091.1	1043211	1043310	closed_genesearch	r1	genesearch	no_target_cross	2ALLELES	het
+dep2	gap0610	OZ418091.1	5197681	5197780	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0611	OZ418091.1	6256219	6256318	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0612	OZ418091.1	8004937	8005036	closed_strict	r1	insert	wrong_allele	FILLED_2COPY	hom_one_hap
+dep2	gap0613	OZ418091.1	8658661	8658760	N				UNRESOLVED	tandem
+dep2	gap0614	OZ418091.1	11203449	11203548	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0615	OZ418091.1	12380064	12380163	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0616	OZ418091.1	12415009	12415108	N				FILLED_REPEAT	fill_repeat
+dep2	gap0617	OZ418091.1	12517434	12517533	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0618	OZ418091.1	12862331	12862430	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0619	OZ418091.1	13619616	13619715	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0620	OZ418091.1	14615352	14615451	N				UNRESOLVED	dropout
+dep2	gap0621	OZ418091.1	16095443	16095542	N				UNRESOLVED	dropout
+dep2	gap0622	OZ418091.1	17437807	17437906	closed_genesearch	r1	genesearch	no_target_cross	FILLED	fill_unscored
+dep2	gap0623	OZ418091.1	20661790	20661889	N				UNRESOLVED	high_copy
+dep2	gap0624	OZ418091.1	23254734	23254833	closed_genesearch	r1	genesearch	no_target_cross	UNRESOLVED	other
+dep2	gap0625	OZ418091.1	26941224	26941323	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0626	OZ418091.1	33060127	33060226	closed_strict	lr	insert	no_target_cross	FILLED	overlap
+dep2	gap0627	OZ418091.1	35445361	35445460	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0628	OZ418091.1	35783126	35783225	N				FILLED_REPEAT	fill_repeat
+dep2	gap0629	OZ418091.1	36560852	36560951	closed_strict	r1	insert	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0630	OZ418091.1	40460067	40460166	N				UNRESOLVED	tandem
+dep2	gap0631	OZ418091.1	59628283	59628382	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unclear
+dep2	gap0632	OZ418091.1	60126377	60126476	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0633	OZ418091.1	66532574	66532673	N				UNRESOLVED	tandem
+dep2	gap0634	OZ418091.1	68060528	68060627	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0635	OZ418091.1	68223297	68223396	closed_strict	r1	insert	no_target_cross	UNRESOLVED	other
+dep2	gap0636	OZ418091.1	68598842	68598941	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0637	OZ418091.1	69095359	69095458	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0638	OZ418091.1	72593005	72593104	closed_genesearch	lr	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0639	OZ418091.1	74088894	74088993	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0640	OZ418091.1	74875751	74875850	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0641	OZ418091.1	76331063	76331162	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0642	OZ418091.1	76981051	76981150	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep2	gap0643	OZ418091.1	77696429	77696528	N				FILLED_REPEAT	fill_repeat
+dep2	gap0644	OZ418091.1	78151667	78151766	closed_strict	r1	insert	no_target_cross	FILLED_2COPY	hom_one_hap
+dep2	gap0645	OZ418091.1	78525343	78525442	N				FILLED_REPEAT	fill_repeat
+dep2	gap0646	OZ418091.1	80634325	80634424	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep2	gap0647	OZ418091.1	80871482	80871581	N				UNRESOLVED	dropout
+dep2	gap0648	OZ418091.1	87380629	87380728	N				UNRESOLVED	dropout
+dep2	gap0649	OZ418091.1	89592674	89592773	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0650	OZ418091.1	92729420	92729519	closed_strict	r1	join	undecided	JOINED	join
+dep2	gap0651	OZ418091.1	97967743	97967842	N				UNRESOLVED	dropout
+dep2	gap0652	OZ418091.1	107610595	107610694	N				UNRESOLVED	dropout
+dep2	gap0653	OZ418091.1	111363749	111363848	N				FILLED_REPEAT	fill_repeat
+dep2	gap0654	OZ418091.1	111458783	111458882	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0655	OZ418091.1	112182802	112182901	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0656	OZ418091.1	113573425	113573524	closed_strict	r1	join	own_or_identical	JOINED	join
+dep2	gap0657	OZ418091.1	116339584	116339683	N				UNRESOLVED	other
+dep2	gap0658	OZ418091.1	121088253	121088352	closed_strict	lr	join	no_target_cross	JOINED	join
+dep2	gap0659	OZ418091.1	122525469	122525568	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0660	OZ418091.1	124244425	124244524	N				UNRESOLVED	tandem
+dep2	gap0661	OZ418091.1	127849371	127849470	closed_genesearch	r1	genesearch	own_or_identical	FILLED_1COPY	one_copy_fill
+dep2	gap0662	OZ418091.1	129536649	129536748	N				UNRESOLVED	other
+dep2	gap0663	OZ418091.1	132112380	132112479	N				UNRESOLVED	tandem
+dep2	gap0664	OZ418091.1	134095615	134095714	N				FILLED_REPEAT	fill_repeat
+dep2	gap0665	OZ418091.1	134135059	134135158	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0666	OZ418091.1	134711219	134711318	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0667	OZ418091.1	134929976	134930075	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0668	OZ418091.1	135585404	135585503	closed_genesearch	r1	genesearch	no_phasable_reads	UNRESOLVED	high_copy
+dep2	gap0669	OZ418091.1	137640481	137640580	N				FILLED_REPEAT	fill_repeat
+dep2	gap0670	OZ418091.1	138686729	138686828	N				UNRESOLVED	high_copy
+dep2	gap0671	OZ418091.1	139895212	139895311	N				UNRESOLVED	high_copy
+dep2	gap0672	OZ418091.1	140298013	140298112	N				UNRESOLVED	tandem
+dep2	gap0673	OZ418092.1	13232453	13232552	closed_genesearch	r1	genesearch	wrong_allele	2ALLELES	het
+dep2	gap0674	OZ418092.1	19943155	19943254	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0675	OZ418092.1	20244136	20244235	N				UNRESOLVED	high_copy
+dep2	gap0676	OZ418092.1	20696416	20696515	N				FILLED_REPEAT	fill_repeat
+dep2	gap0677	OZ418092.1	38943318	38943417	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep2	gap0678	OZ418092.1	41239364	41239463	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0679	OZ418092.1	41456160	41456259	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0680	OZ418092.1	49852391	49852490	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0681	OZ418092.1	50068972	50069071	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0682	OZ418092.1	51213896	51213995	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0683	OZ418092.1	51649697	51649796	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0684	OZ418092.1	54718807	54718906	N				FILLED_REPEAT	fill_repeat
+dep2	gap0685	OZ418092.1	55655454	55655553	closed_genesearch	r1	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0686	OZ418092.1	56163143	56163242	closed_strict	lr	insert	own_or_identical	FILLED	overlap
+dep2	gap0687	OZ418092.1	56286931	56287030	closed_strict	r1	insert	wrong_allele	2ALLELES	het
+dep2	gap0688	OZ418092.1	56472953	56473052	N				UNRESOLVED	dropout
+dep2	gap0689	OZ418092.1	57178521	57178620	closed_genesearch	r1	genesearch	undecided	FILLED_1COPY	one_copy_fill
+dep2	gap0690	OZ418092.1	60358703	60358802	N				FILLED_REPEAT	fill_repeat
+dep2	gap0691	OZ418092.1	63053091	63053190	closed_genesearch	r1	genesearch	flanks_tie	FILLED_1COPY	one_copy_fill
+dep2	gap0692	OZ418092.1	76212743	76212842	closed_genesearch	r1	genesearch	flanks_tie	FILLED	fill_unscored
+dep2	gap0693	OZ418092.1	80430042	80430141	N				UNRESOLVED	tandem
+dep2	gap0694	OZ418092.1	95903142	95903241	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0695	OZ418092.1	96122923	96123022	N				UNRESOLVED	tandem
+dep2	gap0696	OZ418092.1	103967606	103967705	closed_genesearch	lr	genesearch	no_target_cross	FILLED_1COPY	one_copy_fill
+dep2	gap0697	OZ418092.1	104603543	104603642	closed_genesearch	r1	genesearch	wrong_allele	FILLED	fill_unscored
+dep2	gap0698	OZ418092.1	111730941	111731040	closed_strict	r1	join	wrong_allele	JOINED	join
+dep2	gap0699	CEVEHX010000001.1	331836	331935	closed_genesearch	r1	genesearch	undecided	FILLED	fill_unscored
+dep2	gap0700	CEVEHX010000001.1	1314659	1314758	closed_genesearch	r1	genesearch	wrong_allele	FILLED_1COPY	one_copy_fill
+dep2	gap0701	CEVEHX010000001.1	4288431	4288530	N				UNRESOLVED	dropout
+dep2	gap0702	CEVEHX010000013.1	661610	661709	N				UNRESOLVED	tandem
