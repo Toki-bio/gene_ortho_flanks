@@ -1,0 +1,31 @@
+Thu Nov  5 17:59:05 MSK 2026
+754 tests.tsv
+754
+TMED4 names 58
+Thu Nov  5 17:59:18 MSK 2026
+TMED4 dep1	gap0441	OZ418347.1	96007474	96007574	one_copy_fill	genesearch	2331	dep2	OZ418087.1:95802104-95804435	+	58	18	26	3	6	5	0	1	4	0	1	20	20	7	+158	0	NA	0	NA	0.43	wrong_allele
+Thu Nov  5 17:59:19 MSK 2026
+Thu Nov  5 18:01:28 MSK 2026
+rows 754 of 754
+fills with reads=0: 0
+== verdicts
+    299 wrong_allele
+    258 no_target_cross
+    101 own_or_identical
+     52 undecided
+     36 flanks_tie
+      7 no_phasable_reads
+      1 wrong_allele_structure
+column differs dep1 gap0021 23 python 38,37,37,37,37,41,37 awk 41,37,38,37,37,37,37
+column differs dep1 gap0070 23 python 0,0,0,0,0,0,0,0,5,0,0,0,0,0,0 awk 5,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+column differs dep1 gap0107 23 python 20,21,20,18,19,19,20 awk 19,21,18,20,20,19,20
+column differs dep1 gap0117 23 python 5,4,4,4,4,4,4,4,4,4,4 awk 4,4,4,4,4,4,4,4,5,4,4
+column differs dep1 gap0193 23 python 5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4 awk 4,4,4,4,4,5,4,4,4,4,4,4,4,4,4,4
+column differs dep1 gap0206 23 python 29,30,30,30,30,30,30 awk 30,30,29,30,30,30,30
+column differs dep1 gap0205 23 python 14,14,14,14,14,16,14 awk 16,14,14,14,14,14,14
+column differs dep1 gap0332 23 python 13,12,11,13,14,13,13,14 awk 14,13,13,13,11,13,12,14
+column differs dep1 gap0330 23 python 3,2,2,2,3,2,2,2,3 awk 2,2,3,3,2,3,2,2,2
+column differs dep1 gap0338 23 python 1,0 awk 0,1
+python fills 378 not in awk 0 | verdicts differ 0 | number columns differ 17 | substitution lists differ 27
+Thu Nov  5 18:01:28 MSK 2026
+finished

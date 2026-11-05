@@ -483,6 +483,10 @@ def pool():
     print("finished", flush=True)
 
 
+def t_has_names(row, tests):
+    return any(t["meta"][:2] == row[:2] and t["names"] for t in tests)
+
+
 def all_fills():
     global TH
     import multiprocessing as mp, pickle
@@ -519,8 +523,11 @@ def all_fills():
     for r in reads:
         print(*r, sep="\t", file=rr)
     n = 1
-    with mp.Pool(12) as pl:
+    with mp.get_context("fork").Pool(12) as pl:   # fork: workers must inherit POOL
         for row, reads in pl.imap_unordered(one, [t for t in tests if t is not k]):
+            if row[-1] == "no_reads" and t_has_names(row, tests):
+                print("NO READS IN WORKER, stopping", row[:2], flush=True)
+                sys.exit(1)
             print(*row, sep="\t", file=out); out.flush()
             for r in reads:
                 print(*r, sep="\t", file=rr)
