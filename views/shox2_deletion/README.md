@@ -24,3 +24,11 @@ the same in jerboa, *Zapus* and all four *Sicista* haplotypes. 6228 - 6090 = 138
 
 Full work: `C:\work\hylomys_ont\shox2_deletion\` (README.md, scripts, dot plots); server
 `therioserver:/home/toki/Sicista2026/shox2_deletion/`.
+
+## Left end (2026-11-20)
+`leftend.aln.fa`: mouse window offsets 4600-5300 (mm10 chr3:67266088-67266788) and each dipodoid from its projection of
+mouse 4600 to 100 bp past its junction; MAFFT L-INS-i. `leftend.bed`: mouse = start of the paper's segment onwards;
+dipodoids = their last 100 bp, the right flank after the junction.
+Mouse vs dipodoids 53-85% up to mouse ~4990-5001, then 43-47% (the right flank forced onto deleted mouse sequence).
+MAFFT places every dipodoid junction at mouse 5001 (Zapus 4997). Left end = mouse ~5001 (+-15), the start of the paper's
+segment. With the right end at ~6090 the deletion is ~5001-6089 = ~1089 bp, the paper's number.
