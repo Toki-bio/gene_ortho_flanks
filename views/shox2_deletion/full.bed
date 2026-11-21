@@ -1,0 +1,15 @@
+mouse_mm10	401	1629	paper's 1228-bp segment (mm10 chr3:67266489-67267716)	0	+	401	1629	230,160,0
+mouse_mm10	401	1490	deleted in all dipodoids (~1089 bp, mouse offsets 5001-6089)	0	+	401	1490	200,0,0
+mouse_mm10	1547	1570	block kept in all (mouse 6147-6169)	0	+	1547	1570	0,120,110
+jerboa_Jjac	406	410	junction: deletion here (+-15 bp)	0	+	406	410	200,0,0
+jerboa_Jjac	465	488	block kept in all (mouse 6147-6169)	0	+	465	488	0,120,110
+Zapus_hud	506	510	junction: deletion here (+-15 bp)	0	+	506	510	200,0,0
+Zapus_hud	565	588	block kept in all (mouse 6147-6169)	0	+	565	588	0,120,110
+Sbet_hap1	426	430	junction: deletion here (+-15 bp)	0	+	426	430	200,0,0
+Sbet_hap1	485	508	block kept in all (mouse 6147-6169)	0	+	485	508	0,120,110
+Sbet_hap2	427	431	junction: deletion here (+-15 bp)	0	+	427	431	200,0,0
+Sbet_hap2	486	509	block kept in all (mouse 6147-6169)	0	+	486	509	0,120,110
+Stri_hap1	441	445	junction: deletion here (+-15 bp)	0	+	441	445	200,0,0
+Stri_hap1	500	523	block kept in all (mouse 6147-6169)	0	+	500	523	0,120,110
+Stri_hap2	432	436	junction: deletion here (+-15 bp)	0	+	432	436	200,0,0
+Stri_hap2	491	514	block kept in all (mouse 6147-6169)	0	+	491	514	0,120,110

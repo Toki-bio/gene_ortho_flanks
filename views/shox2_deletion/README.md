@@ -32,3 +32,10 @@ dipodoids = their last 100 bp, the right flank after the junction.
 Mouse vs dipodoids 53-85% up to mouse ~4990-5001, then 43-47% (the right flank forced onto deleted mouse sequence).
 MAFFT places every dipodoid junction at mouse 5001 (Zapus 4997). Left end = mouse ~5001 (+-15), the start of the paper's
 segment. With the right end at ~6090 the deletion is ~5001-6089 = ~1089 bp, the paper's number.
+
+## Full locus (2026-11-21)
+`full.aln.fa` + `full.bed`: mouse offsets 4600-6443 (left flank, the paper's 1228-bp segment, right flank) against the six dipodoid rows,
+MAFFT L-INS-i; cut by `cut_full.py`. The 23-bp block kept in all rows sits in one column in every row.
+In every dipodoid the big gap covers mouse 4966-5031 and 5042-5876 (Zapus to 5835). About 110 dipodoid bases (160 in Zapus) are spread over mouse 5877-6089
+at 41-45% identity, which is background: MAFFT has to put the unrelated bases somewhere. So the ends in this view are blurred;
+the end positions (left ~5001, right ~6090) come from the two end alignments, not from this one.
